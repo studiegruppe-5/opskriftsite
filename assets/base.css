@@ -1,20 +1,82 @@
 @font-face {
   font-family: Rampart_One;
-  src: url("../assets/fonts/RampartOne-Regular.ttf");
+  src: url(../assets/fonts/RampartOne-Regular.ttf);
+}
+@font-face {
+  font-family: playfair_display_black;
+
+  src: url(../assets/fonts/PlayfairDisplay-Black.ttf);
+}
+@font-face {
+  font-family: playfair_display_semibold;
+  src: url(../assets/fonts/PlayfairDisplay-SemiBold.ttf);
+}
+@font-face {
+  font-family: playfair_display_regular;
+  src: url(../assets/fonts/PlayfairDisplay-Regular.ttf);
+}
+
+html {
+  --blue: #00408d;
+  --pink: #f3d7d3;
+  --banner: #f8b7b0;
+  --beige: #f2eee9;
+}
+
+section {
+  max-width: 90%;
+  margin: auto;
+}
+
+.full_width {
+  max-width: 100%;
+  margin: auto;
 }
 
 h1 {
   font-family: Rampart_One, sans-serif;
   text-transform: uppercase;
+  font-size: 60px;
+  color: var(--blue);
 }
 
-h2,
-h3 {
-  font-family: "playfair-display", serif;
-  font-weight: 900;
-  font-style: normal;
+h2 {
+  font-family: playfair_display_black, serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  color: var(--blue);
 }
 
 h3 {
-  font-weight: 400;
+  font-family: playfair_display_semibold, serif;
+  font-size: 16px;
+  color: var(--blue);
+}
+
+p {
+  font-family: playfair_display_regular, serif;
+  font-size: 12px;
+  color: var(--blue);
+}
+
+.pink_text {
+  color: var(--pink);
+}
+
+@media (width >= 700px) {
+  h1 {
+    font-size: 96px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 22px;
+  }
 }
