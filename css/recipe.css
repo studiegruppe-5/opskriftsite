@@ -38,3 +38,6 @@ div ul {
   color: var(--blue);
   list-style-type: none;
 }
+div ul li {
+  padding: 7px;
+}
