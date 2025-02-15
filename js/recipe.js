@@ -19,7 +19,7 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
 
             <h3>ingredients</h3>
             <div>
-                <ul>
+                <ul class="ingredient-list">
                 ${recipe.ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
                 </ul>
             </div>
