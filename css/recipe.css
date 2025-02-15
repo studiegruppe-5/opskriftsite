@@ -1,0 +1,40 @@
+img {
+  display: block;
+  margin: auto;
+}
+
+.recipe {
+  background-color: var(--beige);
+  text-align: center;
+  padding: 10px;
+  box-shadow: -3px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.recipe div,
+.recipe h3 {
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.recipe h3 {
+  padding-top: 20px;
+}
+
+.recipe div {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.recipe div p {
+  margin-left: 15px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+div ul {
+  color: var(--blue);
+  list-style-type: none;
+}
