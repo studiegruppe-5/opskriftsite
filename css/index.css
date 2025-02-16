@@ -1,11 +1,21 @@
+body {
+    background-image: url(../assets/img/logo_pink.webp);
+    background-repeat: repeat;
+    background-size: 10%;
+    margin: 0;
+  }
+
+  h3{
+    font-family: playfair_display_semibold;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 
 .pink{
     background-color: #F3D7D3;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
-    text-align: center;
-    padding: 20px;
+    padding: 8%;
     margin-bottom: 50px;
 }
 
@@ -13,19 +23,62 @@ img{
     width: 100%;
 }
 
-button{
+button {
     background-color: #00408D;
-    color: white;
+    color: #F3D7D3;
     border: none;
     font-family: playfair_display_regular, serif;
     font-size: 12px;
     padding: 3px 20px;
+        display: inline-block;
+    cursor: pointer; /* Sikrer at det ligner en knap */
+    transition: transform 0.3s ease-in-out; /* Tilføjer en glidende effekt */
+}
+
+button:hover {
+    transform: scale(1.1); /* Gør knappen 10% større ved hover */
 }
 
 .img_rul{
     margin-bottom: 50px;
 }
 
+
+  
+.grid_1_1 {
+    background-color: #F2EEE9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    gap: 15px;
+    margin-bottom: 10%;
+    padding: 3%;
+  }
+
+  .img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text_flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .grid_1_1 h3{
+    margin: 0;
+  }
+
+  @media (width >= 700px) {
+    .pink {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+}
 
 
   
