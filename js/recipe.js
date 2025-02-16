@@ -11,12 +11,15 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
     recipeContainer.innerHTML = `
         <h1>${recipe.name}</h1>
         <img src="${recipe.image}" alt="Image of the specific recipe" />
-        <section class="recipe">    
-            <h2>${recipe.name}</h2>
-            <p><b>Prep:</b> ${recipe.prepTimeMinutes} mins </p>
-            <p><b>Cook:</b> ${recipe.cookTimeMinutes} mins</p>
-            <p>${recipe.difficulty}</p>
-            <p>${recipe.servings}</p>
+        <section class="recipe">
+        <h2>${recipe.name}</h2>
+            <div class="quick_facts">    
+                <p class="icon_text"> <img src="assets/imgs/recipe_icons/time.svg" alt="Cooking time icon" class="icon"> <b>Prep:</b> ${recipe.prepTimeMinutes} mins <b>Cook:</b> ${recipe.cookTimeMinutes} mins</p>
+
+                <p class="icon_text"> <img src="assets/imgs/recipe_icons/niveau.svg" alt="Difficulty icon" class="icon"> ${recipe.difficulty}</p>
+
+                <p class="icon_text"> <img src="assets/imgs/recipe_icons/servings.svg" alt="Servings icon" class="icon cutlery"> ${recipe.servings}</p>
+            </div>
 
             <h3>ingredients</h3>
             <div>
@@ -27,11 +30,9 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
                     return `
                     <li>
                       ${ingredient} 
-                      </li>
-                      <li>
                       <input type="checkbox" id="${checkboxId}" />
                       <label for="${checkboxId}"></label>
-                      </li>
+                    </li>
                   `;
                   })
                   .join("")}
@@ -40,28 +41,44 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
             <!-- knap til at springe op og ned på siden -->
             <h3>instructions</h3>
             <div>
-                <!-- knap til at holde skærmen tændt -->
-                <ol class="instruction_list">
-      ${recipe.instructions
-        .map((step, index) => {
-          let checkboxId = `instruction-${index}`;
-          return `
-          <li>
-            <span class="step-text">${step}</span>
-            <input type="checkbox" id="${checkboxId}" />
-            <label for="${checkboxId}"></label>
-          </li>
-        `;
-        })
-        .join("")}
-    </ol>
+                <div id="wakeLockContainer">
+                    <button id="preventSleepBtn">
+                    <img src="assets/imgs/recipe_icons/toggle-off.svg" alt="Icon toggled off" id="icon"></button>
+                    <span id="preventText">Prevent the screen from turning off</span>
+                    </div>
+                    <ol class="instruction_list">${recipe.instructions.map((step) => `<li>${step}</li>`).join("")}</ol>
                 </div>
-                </section>
+            </div>
+        </section>
+
+        <div class="watch">
+            <h3>Watch the recipe as a video</h3>
+            <video src=""></video>
+        </div>
                 `;
+
+    let wakeLock = null;
+    const preventSleepBtn = document.getElementById("preventSleepBtn");
+    const icon = document.getElementById("icon");
+
+    preventSleepBtn.addEventListener("click", async () => {
+      try {
+        if (wakeLock !== null) {
+          wakeLock.release();
+          wakeLock = null;
+          icon.src = "assets/imgs/recipe_icons/toggle-off.svg"; // Skift billede til "off"
+        } else {
+          wakeLock = await navigator.wakeLock.request("screen");
+          icon.src = "assets/imgs/recipe_icons/toggle-on.svg"; // Skift billede til "on"
+        }
+      } catch (err) {
+        console.error("Fejl ved forsøg på at forhindre skærmdvale:", err);
+      }
+    });
+
+    document.querySelectorAll(".instruction_list li").forEach((item) => {
+      item.addEventListener("click", function () {
+        this.classList.toggle("completed");
+      });
+    });
   });
-
-//   <ul class="ingredient-list">
-//                 ${recipe.ingredients.map((ingredient) => `<li>${ingredient} <input type="checkbox" /></li>`).join("")}
-//                 </ul>
-
-//<ol class="instruction_list">${recipe.instructions.map((step) => `<li>${step}</li>`).join("")}</ol>;

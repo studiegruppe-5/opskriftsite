@@ -5,7 +5,7 @@ img {
   padding-bottom: 70px;
 }
 
-.recipe {
+section {
   background-color: var(--beige);
   text-align: center;
   padding: 5px;
@@ -28,9 +28,15 @@ img {
   border-radius: 5px;
 }
 
+h1 {
+  text-align: center;
+}
+
 h3 {
   text-transform: uppercase;
 }
+
+/********** LISTS *************/
 
 div ul {
   color: var(--blue);
@@ -59,7 +65,7 @@ ol li {
   border-bottom: none;
 }
 
-/* CHECKBOX */
+/******** CHECKBOX ***********/
 .ingredient_list input[type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -87,88 +93,81 @@ ol li {
   transform: translate(-50%, -50%);
 }
 
-.instruction_list {
-  list-style-type: decimal;
-  list-style-position: inside;
-  padding-left: 20px;
-}
-
-.instruction_list li {
-  /* align-items: center; */
-  padding-right: 40px;
-  position: relative;
-}
-
-.instruction_list input[type="checkbox"] {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.instruction_list label {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  border: 1.5px solid var(--blue);
-  border-radius: 10px;
-  position: relative;
+.instruction_list li:hover {
+  color: rgb(75, 74, 74);
+  text-decoration: line-through;
   cursor: pointer;
-  margin-left: 20px;
 }
 
-.instruction_list input[type="checkbox"]:checked + label::after {
-  content: "✔";
-  font-size: 12px;
-  color: var(--blue);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.completed {
+  color: rgb(75, 74, 74);
+  text-decoration: line-through;
+}
+/**********************/
+
+/****** ICONS *******/
+
+section .quick_facts {
+  background-color: transparent;
+}
+
+.quick_facts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.icon_text {
+  display: flex;
+  align-items: normal;
+  gap: 8px;
+  margin-bottom: -60px;
+}
+
+.icon {
+  width: 20px;
+  height: auto;
+  margin-right: 2px;
+}
+
+.cutlery {
+  width: 10px;
 }
 
 /**********************/
-/* 
-.instruction_list {
-  list-style: decimal;
-  list-style-position: inside;
-  padding-left: 20px;
-}
 
-.instruction_list li {
+/******** SCREEN ON/OFF ********/
+
+#wakeLockContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  position: relative;
+  gap: 5px;
 }
 
-.step-text {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-.instruction_list input[type="checkbox"] {
-  opacity: 0; 
-  width: 0; 
-  height: 0;
-}
-
-.instruction_list label {
-  display: inline-block;
-  width: 20px; 
-  height: 20px;
-  border: 1.5px solid var(--blue);
-  border-radius: 50%;
-  position: relative;
+#preventSleepBtn {
+  background: none;
+  border: none;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.instruction_list input[type="checkbox"]:checked + label::after {
-  content: "✔";
-  font-size: 12px;
+#preventSleepBtn img {
+  padding: 10px;
+  width: 35px;
+  height: auto;
+}
+
+#preventText {
+  font-size: 14px;
   color: var(--blue);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+  margin: 0;
+  padding: 0;
+}
+
+/**********************/
