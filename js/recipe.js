@@ -50,11 +50,7 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
                 </div>
             </div>
         </section>
-            <div class="watch">
-            <h3 >Watch the recipe as a video</h3>
-            <img class="video" src="${recipe.image}" alt="Image of the specific recipe" />
-            <img class="play" src="assets/imgs/recipe_icons/play.svg" alt="Image of the specific recipe" />            
-            </div>
+         
                 `;
 
     let wakeLock = null;
@@ -82,3 +78,9 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
       });
     });
   });
+
+// <div class="watch">
+// <h3 >Watch the recipe as a video</h3>
+// <img class="video" src="${recipe.image}" alt="Image of the specific recipe" />
+// <img class="play" src="assets/imgs/recipe_icons/play.svg" alt="Image of the specific recipe" />
+// </div>
