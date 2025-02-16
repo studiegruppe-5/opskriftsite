@@ -41,24 +41,24 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
             <!-- knap til at springe op og ned på siden -->
             <h3>instructions</h3>
             <div>
-                <div id="wakeLockContainer">
-                    <button id="preventSleepBtn">
+                <div class="wakeLockContainer">
+                    <button class="preventSleepBtn">
                     <img src="assets/imgs/recipe_icons/toggle-off.svg" alt="Icon toggled off" id="icon"></button>
-                    <span id="preventText">Prevent the screen from turning off</span>
+                    <span class="preventText">Prevent the screen from turning off</span>
                     </div>
                     <ol class="instruction_list">${recipe.instructions.map((step) => `<li>${step}</li>`).join("")}</ol>
                 </div>
             </div>
         </section>
-
-        <div class="watch">
-            <h3>Watch the recipe as a video</h3>
-            <video src=""></video>
-        </div>
+            <div class="watch">
+            <h3 >Watch the recipe as a video</h3>
+            <img class="video" src="${recipe.image}" alt="Image of the specific recipe" />
+            <img class="play" src="assets/imgs/recipe_icons/play.svg" alt="Image of the specific recipe" />            
+            </div>
                 `;
 
     let wakeLock = null;
-    const preventSleepBtn = document.getElementById("preventSleepBtn");
+    const preventSleepBtn = document.querySelector(".preventSleepBtn");
     const icon = document.getElementById("icon");
 
     preventSleepBtn.addEventListener("click", async () => {

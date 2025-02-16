@@ -141,13 +141,13 @@ section .quick_facts {
 
 /******** SCREEN ON/OFF ********/
 
-#wakeLockContainer {
+.wakeLockContainer {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-#preventSleepBtn {
+.preventSleepBtn {
   background: none;
   border: none;
   cursor: pointer;
@@ -157,13 +157,13 @@ section .quick_facts {
   justify-content: center;
 }
 
-#preventSleepBtn img {
+.preventSleepBtn img {
   padding: 10px;
   width: 35px;
   height: auto;
 }
 
-#preventText {
+.preventText {
   font-size: 14px;
   color: var(--blue);
   margin: 0;
@@ -171,3 +171,19 @@ section .quick_facts {
 }
 
 /**********************/
+/******** VIDEO FEATURE **********/
+.watch h3 {
+  color: var(--pink);
+  text-align: center;
+  background-color: var(--blue);
+  margin: 10%;
+}
+
+.play {
+  position: absolute;
+  top: 224%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Juster størrelsen efter behov */
+  height: auto;
+}
