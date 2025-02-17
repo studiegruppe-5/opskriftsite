@@ -124,5 +124,6 @@ img {
 @media (width >=500px) {
   .favorites {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* husk grid-column: 1 / -1; på h1 */
   }
 }
