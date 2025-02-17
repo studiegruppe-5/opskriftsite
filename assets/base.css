@@ -67,6 +67,121 @@ p {
   color: var(--pink);
 }
 
+/**************** HEADER ********************/
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img{
+  width: 200px;
+  padding: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Skjuler checkboxen */
+#menu-toggle {
+display: none;
+}
+
+/* Skjuler checkboxen */
+#menu-toggle {
+display: none;
+}
+
+/* Styling af burger-ikonet */
+.burger {
+display: flex;
+flex-direction: column;
+gap: 5.5px;
+cursor: pointer;
+width: 24px;
+position: fixed;
+right: 20px;
+z-index: 100;
+}
+
+.burger span {
+display: block;
+width: 24px;
+height: 3px;
+background: var(--blue);;
+transition: 0.3s;
+border-radius: 2px;
+}
+
+/* Roter burger-ikonet til et kryds */
+#menu-toggle:checked + .burger span:nth-child(1) {
+transform: translateY(9px) rotate(45deg);
+}
+
+#menu-toggle:checked + .burger span:nth-child(2) {
+opacity: 0;
+}
+
+#menu-toggle:checked + .burger span:nth-child(3) {
+transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Styling af menu */
+.menu {
+position: fixed;
+top: 0;
+right: -100%;
+max-width: 100%;
+width: 100vw;
+height: 100vh;
+background: #F2EEE9;
+box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+transition: right 0.3s ease-in-out;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+/* justify-content: center; */
+}
+
+.menu div{
+  padding: 20px;
+}
+
+.menu h4{
+  font-family: playfair_display_semibold, serif;
+  font-size: 22px;
+  color: var(--blue);
+}
+
+.menu ul {
+list-style: none;
+padding: 0;
+}
+
+.menu li {
+  font-family: inherit;
+margin: 15px 0;
+text-decoration: none;
+font-size: 18px;
+color: var(--blue);
+}
+
+.menu li:hover{
+  text-decoration: underline;
+} 
+
+
+/* Når checkboxen er checked, vises menuen */
+#menu-toggle:checked ~ .menu {
+right: 0;
+z-index: 1;
+}
+
+/***************** HEADER SLUT *************/
+
 /************ MOVING TEXT ****************'*/
 
 .img_rul {
