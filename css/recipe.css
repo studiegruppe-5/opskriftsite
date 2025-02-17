@@ -247,18 +247,19 @@ hr {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-footer h3 {
+.curious {
   grid-column: 1 / 4;
   grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-footer .button {
-  grid-column: 1 / 4;
-  grid-row: 2;
-}
-
-footer a {
+.icons {
   grid-row: 3;
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 footer hr {
