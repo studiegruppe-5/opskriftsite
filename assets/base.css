@@ -23,9 +23,9 @@ html {
   --beige: #f2eee9;
 }
 
-body{
+body {
   margin: 0;
-  }
+}
 
 section {
   max-width: 90%;
@@ -70,39 +70,36 @@ p {
 /************ MOVING TEXT ****************'*/
 
 .img_rul {
-  background-color: #00408D;
+  background-color: #00408d;
   overflow: hidden;
 }
-
 
 .moving_p {
   display: flex;
   font-family: Rampart_One, sans-serif;
   font-size: 2em;
-  color: #F8B7B0;
+  color: #f8b7b0;
   text-transform: uppercase;
   white-space: nowrap;
   width: max-content;
-  animation: scroll-right 10s linear infinite; 
+  animation: scroll-right 10s linear infinite;
   align-items: center;
   margin: 20px;
 }
 
-  .img_rul img{
-      width: 4.4em;
-      padding-left: 0.25em;
-  }
+.img_rul img {
+  width: 4.4em;
+  padding-left: 0.25em;
+}
 
-    
-  @keyframes scroll-right {
-    0% {
-        transform: translateX(100vw); 
-    }
-    100% {
-        transform: translateX(-100%); 
-    }
+@keyframes scroll-right {
+  0% {
+    transform: translateX(100vw);
   }
-
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 @media (width >= 700px) {
   h1 {
@@ -125,4 +122,35 @@ p {
     font-size: 6em;
     margin: 30px;
   }
+}
+
+/* email****************** */
+
+.email {
+  padding-top: 4%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  color: var(--pink) !important;
+
+  align-items: center; /* Centrerer indholdet horisontalt */
+}
+
+.email img {
+  max-width: 32%;
+}
+
+.email button {
+  margin: 4%;
+  background-color: var(--pink);
+  color: var(--blue);
+}
+
+.email input {
+  margin: 0 auto;
+  display: block;
+  width: 140%;
+  transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
+  color: var(--blue);
+  border: 0;
 }
