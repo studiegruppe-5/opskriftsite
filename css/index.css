@@ -7,12 +7,18 @@ body {
 
   section{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10%;
   }
 
   h3{
     font-family: playfair_display_semibold;
     font-size: 16px;
     text-transform: uppercase;
+  }
+
+  h4{
+    font-family: playfair_display_semibold;
+    font-size: 14px;
   }
 
 .pink{
@@ -43,11 +49,49 @@ button:hover {
     transform: scale(1.1); /* Gør knappen 10% større ved hover */
 }
 
+/************* KARUSSEL ************/
+
+.carousel {
+  background-color: #F2EEE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel h4{
+  margin: 0;
+  text-align: center;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel_container{
+  width: 100%;
+  padding: 20px 5px;
+}
+
+.carousel_btn {
+  background-color: #F2EEE9;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.carousel_btn:hover {
+  background-color: #555;
+}
+
+ /**********KARUSSEL SLUT **************/
+
 .img_rul{
     margin-bottom: 50px;
 }
-
-
   
 .grid_1_1 {
     background-color: #F2EEE9;
