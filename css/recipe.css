@@ -10,7 +10,7 @@ img {
   text-align: center;
   padding: 5px;
   box-shadow: -3px 8px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .recipe div,
@@ -181,13 +181,8 @@ section .quick_facts {
   margin: 10%;
 }
 
-.play {
-  position: absolute;
-  top: 224%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px; /* Juster størrelsen efter behov */
-  height: auto;
+.watch img {
+  width: 90%;
 }
 /**********************/
 
