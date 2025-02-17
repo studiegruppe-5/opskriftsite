@@ -23,6 +23,10 @@ html {
   --beige: #f2eee9;
 }
 
+body{
+  margin: 0;
+  }
+
 section {
   max-width: 90%;
   margin: auto;
@@ -63,6 +67,43 @@ p {
   color: var(--pink);
 }
 
+/************ MOVING TEXT ****************'*/
+
+.img_rul {
+  background-color: #00408D;
+  overflow: hidden;
+}
+
+
+.moving_p {
+  display: flex;
+  font-family: Rampart_One, sans-serif;
+  font-size: 2em;
+  color: #F8B7B0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: max-content;
+  animation: scroll-right 10s linear infinite; 
+  align-items: center;
+  margin: 20px;
+}
+
+  .img_rul img{
+      width: 4.4em;
+      padding-left: 0.25em;
+  }
+
+    
+  @keyframes scroll-right {
+    0% {
+        transform: translateX(100vw); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+  }
+
+
 @media (width >= 700px) {
   h1 {
     font-size: 96px;
@@ -78,5 +119,10 @@ p {
 
   p {
     font-size: 22px;
+  }
+
+  .moving_p {
+    font-size: 6em;
+    margin: 30px;
   }
 }
