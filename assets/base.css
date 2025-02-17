@@ -23,9 +23,9 @@ html {
   --beige: #f2eee9;
 }
 
-body{
+body {
   margin: 0;
-  }
+}
 
 section {
   max-width: 90%;
@@ -49,6 +49,7 @@ h2 {
   text-transform: uppercase;
   font-size: 22px;
   color: var(--blue);
+  text-align: center;
 }
 
 h3 {
@@ -70,47 +71,46 @@ p {
 /************ MOVING TEXT ****************'*/
 
 .img_rul {
-  background-color: #00408D;
+  background-color: #00408d;
   overflow: hidden;
 }
-
 
 .moving_p {
   display: flex;
   font-family: Rampart_One, sans-serif;
   font-size: 2em;
-  color: #F8B7B0;
+  color: #f8b7b0;
   text-transform: uppercase;
   white-space: nowrap;
   width: max-content;
-  animation: scroll-right 10s linear infinite; 
+  animation: scroll-right 10s linear infinite;
   align-items: center;
   margin: 20px;
 }
 
-  .img_rul img{
-      width: 4.4em;
-      padding-left: 0.25em;
-  }
+.img_rul img {
+  width: 4.4em;
+  padding-left: 0.25em;
+}
 
-    
-  @keyframes scroll-right {
-    0% {
-        transform: translateX(100vw); 
-    }
-    100% {
-        transform: translateX(-100%); 
-    }
+@keyframes scroll-right {
+  0% {
+    transform: translateX(100vw);
   }
-
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 @media (width >= 700px) {
   h1 {
     font-size: 96px;
+    text-align: center;
   }
 
   h2 {
     font-size: 64px;
+    text-align: center;
   }
 
   h3 {
@@ -120,9 +120,190 @@ p {
   p {
     font-size: 22px;
   }
+  .first {
+    gap: 0.5;
+    background-color: var(--beige);
+    margin-top: 10%;
+    margin-bottom: 6%;
+    padding: 2%;
+    padding-bottom: 6%;
+    text-align: center;
+  }
+
+  .first div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .first h2 {
+    margin: 3%;
+  }
+
+  .first a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--blue);
+    padding: 2% 4%;
+  }
+  .second {
+    gap: 0.5;
+    background-color: var(--beige);
+    margin-top: 10%;
+    margin-bottom: 6%;
+    padding: 2%;
+    padding-bottom: 6%;
+    text-align: center;
+  }
+
+  .second div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .second h2 {
+    margin: 3%;
+  }
+
+  .second a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--blue);
+    padding: 2% 4%;
+  }
+
+  .third {
+    gap: 0.5;
+    background-color: var(--beige);
+    margin-top: 10%;
+    margin-bottom: 6%;
+    padding: 2%;
+    padding-bottom: 6%;
+    text-align: center;
+  }
+
+  .third div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .third h2 {
+    margin: 3%;
+  }
+
+  .third a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--blue);
+    padding: 2% 4%;
+  }
+
+  .four {
+    gap: 0.5;
+    background-color: var(--beige);
+    margin-top: 10%;
+    margin-bottom: 6%;
+    padding: 2%;
+    padding-bottom: 6%;
+    text-align: center;
+  }
+
+  .four div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .four h2 {
+    margin: 3%;
+  }
+
+  .four a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--blue);
+    padding: 2% 4%;
+  }
+
+  .five {
+    gap: 0.5;
+    background-color: var(--beige);
+    margin-top: 10%;
+    margin-bottom: 6%;
+    padding: 2%;
+    padding-bottom: 6%;
+    text-align: center;
+  }
+
+  .five div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .five h2 {
+    margin: 3%;
+  }
+
+  .five a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--blue);
+    padding: 2% 4%;
+  }
+
+  .six {
+    gap: 0.5;
+    background-color: var(--beige);
+    margin-top: 10%;
+    margin-bottom: 6%;
+    padding: 2%;
+    padding-bottom: 6%;
+    text-align: center;
+  }
+
+  .six div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .six h2 {
+    margin: 3%;
+  }
+
+  .six a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--blue);
+    padding: 2% 4%;
+  }
 
   .moving_p {
     font-size: 6em;
     margin: 30px;
+  }
+
+  section.email.full_width {
+    align-items: center;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    color: var(--pink) !important;
+    padding-top: 4%;
+  }
+}
+@media (width > 500px) {
+  section.email.full_width {
+    align-items: center;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    color: var(--pink) !important;
+    padding-top: 4%;
   }
 }
