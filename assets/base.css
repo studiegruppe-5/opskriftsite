@@ -38,6 +38,7 @@ h1 {
   text-transform: uppercase;
   font-size: 60px;
   color: var(--blue);
+  text-align: center;
 }
 
 h2 {
