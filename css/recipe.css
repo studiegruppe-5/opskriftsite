@@ -1,0 +1,255 @@
+img {
+  display: block;
+  width: 410px;
+  margin: auto;
+  padding-bottom: 70px;
+}
+
+.recipe {
+  background-color: var(--beige);
+  text-align: center;
+  padding: 5px;
+  box-shadow: -3px 8px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+}
+
+.recipe div,
+.recipe h3 {
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.recipe h3 {
+  padding-top: 20px;
+}
+
+.recipe div {
+  background-color: white;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+/********** LISTS *************/
+
+div ul {
+  color: var(--blue);
+  list-style-type: none;
+}
+
+.ingredient_list li {
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ol li {
+  border-bottom: none;
+  color: var(--blue);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding: 10px;
+}
+.ingredient_list li:last-child {
+  border-bottom: none;
+}
+
+/******** CHECKBOX ***********/
+.ingredient_list input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ingredient_list label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1.5px solid var(--blue);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.ingredient_list input[type="checkbox"]:checked + label::after {
+  content: "✔";
+  font-size: 12px;
+  color: var(--blue);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.instruction_list li:hover {
+  color: rgb(75, 74, 74);
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.completed {
+  color: rgb(75, 74, 74);
+  text-decoration: line-through;
+}
+/**********************/
+
+/****** ICONS *******/
+
+section .quick_facts {
+  background-color: transparent;
+}
+
+.quick_facts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.icon_text {
+  display: flex;
+  align-items: normal;
+  gap: 8px;
+  margin-bottom: -60px;
+}
+
+.icon {
+  width: 20px;
+  height: auto;
+  margin-right: 2px;
+}
+
+.cutlery {
+  width: 10px;
+}
+
+/**********************/
+
+/******** SCREEN ON/OFF ********/
+
+.wakeLockContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.preventSleepBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preventSleepBtn img {
+  padding: 10px;
+  width: 35px;
+  height: auto;
+}
+
+.preventText {
+  font-size: 14px;
+  color: var(--blue);
+  margin: 0;
+  padding: 0;
+}
+
+/**********************/
+
+/******** VIDEO FEATURE **********/
+.watch h3 {
+  color: var(--pink);
+  text-align: center;
+  background-color: var(--blue);
+  margin: 10%;
+}
+
+.play {
+  position: absolute;
+  top: 224%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Juster størrelsen efter behov */
+  height: auto;
+}
+/**********************/
+
+/******** FOOTER **********/
+
+footer {
+  background-color: var(--pink);
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer img {
+  width: 25px;
+  display: inline;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  display: inline;
+  padding: 15px;
+}
+
+.button {
+  background-color: var(--blue);
+  color: var(--pink);
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--blue);
+  width: 80%;
+}
+
+/**********************/
+
+/******** MEDIA QUERIES **********/
+
+@media (width >= 590px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer a,
+  footer p,
+  footer hr {
+    grid-column: 1;
+  }
+
+  footer h3,
+  footer .button {
+    grid-column: 2;
+  }
+}

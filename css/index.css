@@ -1,0 +1,133 @@
+body {
+    background-image: url(../assets/img/logo_pink.webp);
+    background-repeat: repeat;
+    background-size: 10%;
+    margin: 0;
+  }
+
+  section{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10%;
+  }
+
+  h3{
+    font-family: playfair_display_semibold;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  h4{
+    font-family: playfair_display_semibold;
+    font-size: 14px;
+  }
+
+.pink{
+    background-color: #F3D7D3;
+    display: grid;
+    align-items: center;
+    padding: 8%;
+    margin-bottom: 50px;
+}
+
+img{
+    width: 100%;
+}
+
+button {
+    background-color: #00408D;
+    color: #F3D7D3;
+    border: none;
+    font-family: playfair_display_regular, serif;
+    font-size: 12px;
+    padding: 3px 20px;
+        display: inline-block;
+    cursor: pointer; /* Sikrer at det ligner en knap */
+    transition: transform 0.3s ease-in-out; /* Tilføjer en glidende effekt */
+}
+
+button:hover {
+    transform: scale(1.1); /* Gør knappen 10% større ved hover */
+}
+
+/************* KARUSSEL ************/
+
+.carousel {
+  background-color: #F2EEE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel h4{
+  margin: 0;
+  text-align: center;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel_container{
+  width: 100%;
+  padding: 20px 5px;
+}
+
+.carousel_btn {
+  background-color: #F2EEE9;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.carousel_btn:hover {
+  background-color: #555;
+}
+
+ /**********KARUSSEL SLUT **************/
+
+.img_rul{
+    margin-bottom: 50px;
+}
+  
+.grid_1_1 {
+    background-color: #F2EEE9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    gap: 15px;
+    margin-bottom: 10%;
+    padding: 3%;
+  }
+
+  .img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text_flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .grid_1_1 h3{
+    margin: 0;
+  }
+
+  @media (width >= 700px) {
+    .pink {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+}
+
+
+  
+  
