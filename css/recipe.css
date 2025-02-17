@@ -1,6 +1,15 @@
-img {
+body {
+  background-image: url(../assets/img/logo_pink.webp);
+  background-repeat: repeat;
+  background-size: 10%;
+  margin: 0;
+}
+
+/* .recipe_ */
+
+.recipe_img {
   display: block;
-  width: 410px;
+  width: 350px;
   margin: auto;
   padding-bottom: 70px;
 }
@@ -10,7 +19,7 @@ img {
   text-align: center;
   padding: 5px;
   box-shadow: -3px 8px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .recipe div,
@@ -132,6 +141,7 @@ section .quick_facts {
   width: 20px;
   height: auto;
   margin-right: 2px;
+  padding-bottom: 70px;
 }
 
 .cutlery {
@@ -221,8 +231,8 @@ footer p {
   color: var(--pink);
   text-decoration: none;
   padding: 10px;
-  margin-left: 35%;
-  margin-right: 35%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 hr {
@@ -230,6 +240,44 @@ hr {
   height: 2px;
   background-color: var(--blue);
   width: 80%;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer h3 {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+footer .button {
+  grid-column: 1 / 4;
+  grid-row: 2;
+}
+
+footer a {
+  grid-row: 3;
+}
+
+footer hr {
+  grid-row: 4;
+  grid-column: 1 / 4;
+}
+.footer_text {
+  grid-column: 1 / 4;
+  grid-row: 5;
+  display: flex;
+  justify-content: center;
+}
+
+/**********************/
+
+/****** NEWS - SKAL I BASE.CSS *******/
+
+.email {
+  margin-bottom: 60px;
 }
 
 /**********************/
