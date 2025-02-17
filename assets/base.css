@@ -76,7 +76,7 @@ header{
 }
 
 header img{
-  width: 200px;
+  width: 100px;
   padding: 10px;
 }
 
@@ -85,100 +85,123 @@ a{
   color: inherit;
 }
 
-/* Skjuler checkboxen */
-#menu-toggle {
-display: none;
-}
-
-/* Skjuler checkboxen */
-#menu-toggle {
-display: none;
+/* Skjuler checkboxes */
+#menu-toggle, #submenu-toggle {
+  display: none;
 }
 
 /* Styling af burger-ikonet */
 .burger {
-display: flex;
-flex-direction: column;
-gap: 5.5px;
-cursor: pointer;
-width: 24px;
-position: fixed;
-right: 20px;
-z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+  cursor: pointer;
+  width: 24px;
+  position: absolute;
+  right: 20px;
+  z-index: 100;
 }
 
 .burger span {
-display: block;
-width: 24px;
-height: 3px;
-background: var(--blue);;
-transition: 0.3s;
-border-radius: 2px;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--blue);
+  transition: 0.3s;
+  border-radius: 2px;
 }
 
 /* Roter burger-ikonet til et kryds */
-#menu-toggle:checked + .burger span:nth-child(1) {
-transform: translateY(9px) rotate(45deg);
+#menu-toggle:checked ~ .burger span:nth-child(1),
+#submenu-toggle:checked ~ .burger span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
 
-#menu-toggle:checked + .burger span:nth-child(2) {
-opacity: 0;
+#menu-toggle:checked ~ .burger span:nth-child(2),
+#submenu-toggle:checked ~ .burger span:nth-child(2) {
+  opacity: 0;
 }
 
-#menu-toggle:checked + .burger span:nth-child(3) {
-transform: translateY(-9px) rotate(-45deg);
+#menu-toggle:checked ~ .burger span:nth-child(3),
+#submenu-toggle:checked ~ .burger span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* Styling af menu */
-.menu {
-position: fixed;
-top: 0;
-right: -100%;
-max-width: 100%;
-width: 100vw;
-height: 100vh;
-background: #F2EEE9;
-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-transition: right 0.3s ease-in-out;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-/* justify-content: center; */
+.menu, .submenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: #F2EEE9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.menu div{
+.menu div, .submenu div {
   padding: 20px;
 }
 
-.menu h4{
+.menu h4, .submenu h4 {
   font-family: playfair_display_semibold, serif;
   font-size: 22px;
   color: var(--blue);
 }
 
-.menu ul {
-list-style: none;
-padding: 0;
+.menu ul, .submenu ul {
+  list-style: none;
+  padding: 0;
 }
 
-.menu li {
+.menu li, .submenu li {
   font-family: inherit;
-margin: 15px 0;
-text-decoration: none;
-font-size: 18px;
-color: var(--blue);
+  margin: 15px 0;
+  font-size: 18px;
+  color: var(--blue);
+  cursor: pointer;
 }
 
-.menu li:hover{
+.menu li:hover, .submenu li:hover {
   text-decoration: underline;
-} 
-
-
-/* Når checkboxen er checked, vises menuen */
-#menu-toggle:checked ~ .menu {
-right: 0;
-z-index: 1;
 }
+
+/* Når checkboxen til hovedmenu er checked, vises menuen */
+#menu-toggle:checked ~ .menu {
+  right: 0;
+  z-index: 1;
+}
+
+/* Når checkboxen til submenu er checked, skjules hovedmenuen */
+#submenu-toggle:checked ~ .menu {
+  right: -100%;
+}
+
+/* Når checkboxen til submenu er checked, vises submenuen */
+#submenu-toggle:checked ~ .submenu {
+  right: 0;
+  z-index: 2;
+}
+
+/* Luk menu og submenu når burgeren klikkes igen */
+#menu-toggle:not(:checked) ~ .menu,
+#submenu-toggle:not(:checked) ~ .submenu {
+  right: -100%;
+}
+
+/* Styling af "Tilbage"-knap */
+.back-button {
+  display: inline-block;
+  font-size: 18px;
+  color: var(--blue);
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
 
 /***************** HEADER SLUT *************/
 
