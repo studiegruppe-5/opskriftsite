@@ -5,11 +5,12 @@ img {
   padding-bottom: 70px;
 }
 
-section {
+.recipe {
   background-color: var(--beige);
   text-align: center;
   padding: 5px;
   box-shadow: -3px 8px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
 }
 
 .recipe div,
@@ -187,4 +188,68 @@ section .quick_facts {
   transform: translate(-50%, -50%);
   width: 50px; /* Juster størrelsen efter behov */
   height: auto;
+}
+/**********************/
+
+/******** FOOTER **********/
+
+footer {
+  background-color: var(--pink);
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer img {
+  width: 25px;
+  display: inline;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  display: inline;
+  padding: 15px;
+}
+
+.button {
+  background-color: var(--blue);
+  color: var(--pink);
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--blue);
+  width: 80%;
+}
+
+/**********************/
+
+/******** MEDIA QUERIES **********/
+
+@media (width >= 590px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer a,
+  footer p,
+  footer hr {
+    grid-column: 1;
+  }
+
+  footer h3,
+  footer .button {
+    grid-column: 2;
+  }
 }
