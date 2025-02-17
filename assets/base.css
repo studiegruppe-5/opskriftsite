@@ -68,29 +68,25 @@ p {
 }
 
 /**************** HEADER ********************/
-header{
+/* Grundlæggende styling for header og burger-ikon */
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-header img{
+header img {
   width: 100px;
   padding: 10px;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Skjuler checkboxes */
-#menu-toggle, #submenu-toggle {
-  display: none;
-}
-
-/* Styling af burger-ikonet */
 .burger {
   display: flex;
   flex-direction: column;
@@ -111,54 +107,61 @@ a{
   border-radius: 2px;
 }
 
-/* Roter burger-ikonet til et kryds */
-#menu-toggle:checked ~ .burger span:nth-child(1),
-#submenu-toggle:checked ~ .burger span:nth-child(1) {
+/* Når burgeren får klassen .open, forvandles den til et kryds */
+.burger.open span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
-
-#menu-toggle:checked ~ .burger span:nth-child(2),
-#submenu-toggle:checked ~ .burger span:nth-child(2) {
+.burger.open span:nth-child(2) {
   opacity: 0;
 }
-
-#menu-toggle:checked ~ .burger span:nth-child(3),
-#submenu-toggle:checked ~ .burger span:nth-child(3) {
+.burger.open span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Styling af menu */
-.menu, .submenu {
-  position: fixed;
+/* Standardtilstand for menuerne: skjult med display: none */
+.menu,
+.submenu {
+  display: none;
+  position: absolute;
   top: 0;
-  right: -100%;
+  right: 0;
   max-width: 100%;
   width: 100vw;
-  height: 100vh;
+  height: 400vh;
   background: #F2EEE9;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease-in-out;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 1;
 }
 
-.menu div, .submenu div {
+/* Når .open er tilføjet, vises menuen (med flex, men kan også være block) */
+.menu.open,
+.submenu.open {
+  display: block;
+}
+
+/* Indhold i menuerne */
+.menu div,
+.submenu div {
   padding: 20px;
 }
 
-.menu h4, .submenu h4 {
+.menu h4,
+.submenu h4 {
   font-family: playfair_display_semibold, serif;
   font-size: 22px;
   color: var(--blue);
 }
 
-.menu ul, .submenu ul {
+.menu ul,
+.submenu ul {
   list-style: none;
   padding: 0;
 }
 
-.menu li, .submenu li {
+.menu li,
+.submenu li {
   font-family: inherit;
   margin: 15px 0;
   font-size: 18px;
@@ -166,41 +169,39 @@ a{
   cursor: pointer;
 }
 
-.menu li:hover, .submenu li:hover {
+.menu li:hover,
+.submenu li:hover {
   text-decoration: underline;
 }
 
-/* Når checkboxen til hovedmenu er checked, vises menuen */
-#menu-toggle:checked ~ .menu {
-  right: 0;
-  z-index: 1;
+/* Placering af illustrationer */
+.illustration1 {
+  top: 64px;
+  position: absolute;
+  right: 78px;
 }
 
-/* Når checkboxen til submenu er checked, skjules hovedmenuen */
-#submenu-toggle:checked ~ .menu {
-  right: -100%;
+.illustration2 {
+  top: 210px;
+  position: absolute;
+  right: 41px;
+  width: 85px;
 }
 
-/* Når checkboxen til submenu er checked, vises submenuen */
-#submenu-toggle:checked ~ .submenu {
-  right: 0;
-  z-index: 2;
+.illustration3 {
+  top: 355px;
+  position: absolute;
+  right: 88px;
 }
 
-/* Luk menu og submenu når burgeren klikkes igen */
-#menu-toggle:not(:checked) ~ .menu,
-#submenu-toggle:not(:checked) ~ .submenu {
-  right: -100%;
-}
-
-/* Styling af "Tilbage"-knap */
+/* Tilbage-knap i submenu */
 .back-button {
   display: inline-block;
-  font-size: 18px;
+  font-size: 30px;
   color: var(--blue);
   cursor: pointer;
-  margin-bottom: 15px;
 }
+
 
 
 /***************** HEADER SLUT *************/
@@ -239,29 +240,6 @@ a{
   }
 }
 
-@media (width >= 700px) {
-  h1 {
-    font-size: 96px;
-  }
-
-  h2 {
-    font-size: 64px;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  p {
-    font-size: 22px;
-  }
-
-  .moving_p {
-    font-size: 6em;
-    margin: 30px;
-  }
-}
-
 /* email****************** */
 
 .email {
@@ -291,4 +269,41 @@ a{
   transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
   color: var(--blue);
   border: 0;
+
 }
+@media (width >= 700px) {
+  h1 {
+    font-size: 96px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .moving_p {
+    font-size: 6em;
+    margin: 30px;
+  }
+
+  .menu, .submenu {
+    width: 400px;
+  }
+
+  /* Når menuen er åben */
+  #menu-toggle:checked ~ .menu {
+    right: 0;
+  }
+
+  #submenu-toggle:checked ~ .submenu {
+    right: 0;
+  }
+}
+

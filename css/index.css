@@ -124,23 +124,6 @@ button:hover {
       }
 }
 
-@media (width > 768px){
-    /* Tablet og desktop: menu fylder mindre */
-    .menu, .submenu {
-      width: 400px; /* Justér bredden efter behov */
-      right: -400px; /* Matcher bredden, så den er skjult */
-    }
-  
-    /* Når menuen er åben */
-    #menu-toggle:checked ~ .menu {
-      right: 0;
-    }
-  
-    #submenu-toggle:checked ~ .submenu {
-      right: 0;
-    }
-}
-
 
   
   

@@ -17,20 +17,33 @@
         <img src="assets/img/logo.webp" alt="Bites logo" />
       </a>
 
-      <!-- Checkbox til hovedmenu -->
-      <input type="checkbox" id="menu-toggle" />
-
-      <!-- Checkbox til undermenu -->
-      <input type="checkbox" id="submenu-toggle" />
+      <!-- Burger-menu (udløser visning af hovedmenuen) -->
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
       <!-- Hovedmenu -->
       <section class="menu">
+        <img
+          src="assets/img/eggplant.webp"
+          alt="Aubergine"
+          class="illustration1"
+        />
+        <img src="assets/img/onion.webp" alt="løg" class="illustration2" />
+        <img
+          src="assets/img/mushroom.webp"
+          alt="Champignon"
+          class="illustration3"
+        />
         <div>
           <h4>Udforsk ud fra</h4>
           <nav>
             <ul>
               <li>Alle kategorier</li>
-              <li><label for="submenu-toggle">Cuisines</label></li>
+              <!-- Link til at åbne submenu -->
+              <li class="open-submenu">Cuisines</li>
               <li>Tilberedningstid</li>
               <li>Allergener</li>
             </ul>
@@ -40,10 +53,16 @@
 
       <!-- Undermenu -->
       <section class="submenu">
+        <img src="assets/img/carrot.webp" alt="Gulerod" class="illustration1" />
+        <img
+          src="assets/img/pepper.webp"
+          alt="peberfrugt"
+          class="illustration2"
+        />
         <div>
           <!-- Tilbage-knap -->
-          <label for="submenu-toggle" class="back-button">←</label>
-          <h4>Vælg en Cuisine</h4>
+          <a href="#" class="back-button">←</a>
+          <h4>Cuisine</h4>
           <nav>
             <ul>
               <li><a href="specific_category.html">Italiensk</a></li>
@@ -53,13 +72,6 @@
           </nav>
         </div>
       </section>
-
-      <!-- Burger-menu -->
-      <label for="menu-toggle" class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
     </header>
 
     <main>
