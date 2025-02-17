@@ -1,3 +1,39 @@
+.carousel {
+  background-color: #f2eee9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel h4 {
+  margin: 0;
+  text-align: center;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel_container {
+  width: 100%;
+  padding: 20px 5px;
+}
+
+.carousel_btn {
+  background-color: #f3d7d3;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.carousel_btn:hover {
+  background-color: #555;
+}
+
 .first {
   gap: 0.5;
   background-color: var(--beige);
