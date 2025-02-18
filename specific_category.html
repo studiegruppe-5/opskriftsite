@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/base.css" />
     <link rel="stylesheet" href="css/specific_category.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/sbg2xmd.css" />
     <script src="js/specific_category.js" defer></script>
     <title>Category</title>
   </head>
@@ -14,35 +13,16 @@
 
     <section class="first">
       <div class="center"><</div>
-      <div class="listcontainer"></div>
-      <div class="center">></div>
-    </section>
-    <!-- <section class="first">
-      <div class="center"><</div>
-      <div class="favorites">
-        <h2>Favoritter</h2>
-        <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="" />
-        <img src="https://cdn.dummyjson.com/recipe-images/7.webp" alt="" />
-        <h3>Classic Margherita Pizza</h3>
-        <h3>Tomato Basil Bruschetta</h3>
-      </div>
-      <div class="center">></div>
-    </section> -->
-    <section class="second">
-      <img src="https://picsum.photos/200" alt="" />
-      <h3>Italiensk pasta</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti doloremque ex dolorum incidunt neque voluptatibus ipsam laboriosam earum.</p>
-    </section>
-    <section class="third">
-      <h2>Pasta</h2>
       <div>
-        <img src="https://picsum.photos/200" alt="" />
-        <img src="https://picsum.photos/200" alt="" />
-        <h3>Kategori</h3>
-        <h3>Kategori</h3>
+        <h2>Favorites</h2>
+        <div class="favorites">
+          <div class="listcontainer"></div>
+        </div>
       </div>
-      <a href="#">Se mere</a>
+      <div class="center">></div>
     </section>
+    <div class="oneRecipe"></div>
+    <section class="fullArray third"></section>
     <section class="email full_width">
       <img src="assets/img/logo_pink.webp" alt="" />
       <p class="pink_text">
@@ -57,14 +37,29 @@
   </body>
 </html>
 
-<!-- <article class=" ${product.soldout && "udsolgt"}"  >
-  <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="" /> 
-  <h3>${product.productdisplayname}</h3>
-  <h4>${product.articletype} &#124; ${product.brandname}</h4>
-  <div>
-    <h5 class="${product.discount && "overWrite"}">${product.price},-</h5>
-    ${product.discount > 0 ? `<span class="SaleLabel">-${product.discount}%</span>` : ""}
-    ${product.discount > 0 ? `<h5>Now: ${product.price - product.discount},-</h5>` : ""}
-  </div>
-  <a href="produkt.html?id=${product.id}">Read more</a>
-</article> -->
+<!-- <section class="first">
+      <div class="center"><</div>
+      <div class="favorites">
+        <h2>Favoritter</h2>
+        <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="" />
+        <img src="https://cdn.dummyjson.com/recipe-images/7.webp" alt="" />
+        <h3>Classic Margherita Pizza</h3>
+        <h3>Tomato Basil Bruschetta</h3>
+      </div>
+      <div class="center">></div>
+    </section> 
+    <section class="second">
+      <img src="https://picsum.photos/200" alt="" />
+      <h3>Italiensk pasta</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti doloremque ex dolorum incidunt neque voluptatibus ipsam laboriosam earum.</p>
+    </section>
+    <section class="third">
+      <h2>Pasta</h2>
+      <div>
+        <img src="https://picsum.photos/200" alt="" />
+        <img src="https://picsum.photos/200" alt="" />
+        <h3>Kategori</h3>
+        <h3>Kategori</h3>
+      </div>
+      <a href="#">Se mere</a>
+    </section> -->
