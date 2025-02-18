@@ -269,8 +269,8 @@ a {
   transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
   color: var(--blue);
   border: 0;
-
 }
+
 @media (width >= 700px) {
   h1 {
     font-size: 96px;
@@ -306,3 +306,4 @@ a {
     right: 0;
   }
 }
+
