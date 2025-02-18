@@ -42,7 +42,6 @@ h1 {
   text-transform: uppercase;
   font-size: 60px;
   color: var(--blue);
-  text-align: center;
 }
 
 h2 {
@@ -50,7 +49,6 @@ h2 {
   text-transform: uppercase;
   font-size: 22px;
   color: var(--blue);
-  text-align: center;
 }
 
 h3 {
@@ -68,6 +66,145 @@ p {
 .pink_text {
   color: var(--pink);
 }
+
+/**************** HEADER ********************/
+/* Grundlæggende styling for header og burger-ikon */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header img {
+  width: 100px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+  cursor: pointer;
+  width: 24px;
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--blue);
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Når burgeren får klassen .open, forvandles den til et kryds */
+.burger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Standardtilstand for menuerne: skjult med display: none */
+.menu,
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+  width: 100vw;
+  height: 400vh;
+  background: #F2EEE9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+/* Når .open er tilføjet, vises menuen (med flex, men kan også være block) */
+.menu.open,
+.submenu.open {
+  display: block;
+}
+
+/* Indhold i menuerne */
+.menu div,
+.submenu div {
+  padding: 20px;
+}
+
+.menu h4,
+.submenu h4 {
+  font-family: playfair_display_semibold, serif;
+  font-size: 22px;
+  color: var(--blue);
+}
+
+.menu ul,
+.submenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li,
+.submenu li {
+  font-family: inherit;
+  margin: 15px 0;
+  font-size: 18px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.menu li:hover,
+.submenu li:hover {
+  text-decoration: underline;
+}
+
+/* Placering af illustrationer */
+.illustration1 {
+  top: 64px;
+  position: absolute;
+  right: 78px;
+}
+
+.illustration2 {
+  top: 210px;
+  position: absolute;
+  right: 41px;
+  width: 85px;
+}
+
+.illustration3 {
+  top: 355px;
+  position: absolute;
+  right: 88px;
+}
+
+/* Tilbage-knap i submenu */
+.back-button {
+  display: inline-block;
+  font-size: 30px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+
+
+/***************** HEADER SLUT *************/
 
 /************ MOVING TEXT ****************'*/
 
@@ -103,212 +240,6 @@ p {
   }
 }
 
-@media (width >= 700px) {
-  h1 {
-    font-size: 96px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 64px;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  p {
-    font-size: 22px;
-  }
-  .first {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .first div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .first h2 {
-    margin: 3%;
-  }
-
-  .first a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-  .second {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .second div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .second h2 {
-    margin: 3%;
-  }
-
-  .second a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .third {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .third div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .third h2 {
-    margin: 3%;
-  }
-
-  .third a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .four {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .four div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .four h2 {
-    margin: 3%;
-  }
-
-  .four a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .five {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .five div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .five h2 {
-    margin: 3%;
-  }
-
-  .five a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .six {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .six div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .six h2 {
-    margin: 3%;
-  }
-
-  .six a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .moving_p {
-    font-size: 6em;
-    margin: 30px;
-  }
-
-  section.email.full_width {
-    align-items: center;
-    max-width: 32%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--blue);
-    color: var(--pink) !important;
-    padding-top: 4%;
-  }
-}
-@media (width > 500px) {
-  section.email.full_width {
-    align-items: center;
-    max-width: 32%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--blue);
-    color: var(--pink) !important;
-    padding-top: 4%;
-  }
-}
-
 /* email****************** */
 
 .email {
@@ -338,4 +269,40 @@ p {
   transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
   color: var(--blue);
   border: 0;
+
+}
+@media (width >= 700px) {
+  h1 {
+    font-size: 96px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .moving_p {
+    font-size: 6em;
+    margin: 30px;
+  }
+
+  .menu, .submenu {
+    width: 400px;
+  }
+
+  /* Når menuen er åben */
+  #menu-toggle:checked ~ .menu {
+    right: 0;
+  }
+
+  #submenu-toggle:checked ~ .submenu {
+    right: 0;
+  }
 }
