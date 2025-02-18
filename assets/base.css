@@ -40,26 +40,33 @@ section {
 h1 {
   font-family: Rampart_One, sans-serif;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: clamp(3rem, 8vw, 7rem);
   color: var(--blue);
 }
 
 h2 {
   font-family: playfair_display_black, serif;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: var(--blue);
 }
 
 h3 {
   font-family: playfair_display_semibold, serif;
-  font-size: 16px;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+h4{
+  font-family: playfair_display_semibold, serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: var(--blue);
 }
 
 p {
   font-family: playfair_display_regular, serif;
-  font-size: 12px;
+  font-size: clamp(0.8rem, 2vw, 2rem);
   color: var(--blue);
 }
 
@@ -145,13 +152,6 @@ a {
 .menu div,
 .submenu div {
   padding: 20px;
-}
-
-.menu h4,
-.submenu h4 {
-  font-family: playfair_display_semibold, serif;
-  font-size: 22px;
-  color: var(--blue);
 }
 
 .menu ul,
@@ -272,22 +272,6 @@ a {
 }
 
 @media (width >= 700px) {
-  h1 {
-    font-size: 96px;
-  }
-
-  h2 {
-    font-size: 64px;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  p {
-    font-size: 22px;
-  }
-
   .moving_p {
     font-size: 6em;
     margin: 30px;
@@ -305,5 +289,8 @@ a {
   #submenu-toggle:checked ~ .submenu {
     right: 0;
   }
+}
+
+@media (width > 1050px){
 }
 
