@@ -46,6 +46,7 @@ h1 {
   text-transform: uppercase;
   font-size: clamp(3rem, 8vw, 7rem);
   color: var(--blue);
+  text-align: center;
 }
 
 h2 {
