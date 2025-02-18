@@ -243,23 +243,6 @@ a {
   }
 }
 
-@media (width >= 700px) {
-  h1 {
-    font-size: 96px;
-  }
-
-  h2 {
-    font-size: 64px;
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-
-  p {
-    font-size: 22px;
-  }
-}
 /* email****************** */
 
 .email {
@@ -372,7 +355,7 @@ footer hr {
 
 /**********************/
 
-@media (width >= 700px) {
+@media (width >= 768px) {
   .moving_p {
     font-size: 6em;
     margin: 30px;
