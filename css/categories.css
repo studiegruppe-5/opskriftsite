@@ -83,7 +83,7 @@
   }
 
   .second {
-    margin-top: 10%;
+   
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--beige);
@@ -104,7 +104,7 @@
   .third {
     gap: 0.5;
     background-color: var(--beige);
-    margin-top: 10%;
+   
     margin-bottom: 6%;
     padding: 2%;
     padding-bottom: 6%;
@@ -127,167 +127,6 @@
     background-color: var(--blue);
     padding: 2% 4%;
   }
-
-  /* .first {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .first div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .first h2 {
-    margin: 3%;
-  }
-
-  .first a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-  .second {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .second div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .second h2 {
-    margin: 3%;
-  }
-
-  .second a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .third {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .third div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .third h2 {
-    margin: 3%;
-  }
-
-  .third a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .four {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .four div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .four h2 {
-    margin: 3%;
-  }
-
-  .four a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .five {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .five div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .five h2 {
-    margin: 3%;
-  }
-
-  .five a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .six {
-    gap: 0.5;
-    background-color: var(--beige);
-    margin-top: 10%;
-    margin-bottom: 6%;
-    padding: 2%;
-    padding-bottom: 6%;
-    text-align: center;
-  }
-
-  .six div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .six h2 {
-    margin: 3%;
-  }
-
-  .six a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  } */
 
   /* email****************** */
 
