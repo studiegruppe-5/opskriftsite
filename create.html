@@ -4,12 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/base.css" />
+    <link rel="stylesheet" href="css/create.css" />
     <link rel="stylesheet" href="https://use.typekit.net/sbg2xmd.css" />
     <title>Create</title>
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <h1>Submit your own recipe</h1>
+
+      <section>
+        <h3>Fill out the form below to have your recipe added to our site</h3>
+        <div>
+          <form name="create" class="grid">
+            <div class="recipe-name">
+              <label for="recipe-name">
+                Recipe name:
+                <input id="recipe-name" name="rname" type="text" placeholder="Spaghetti carbonara..." />
+              </label>
+            </div>
+
+            <div class="prep-time">
+              <label for="prep-time">
+                Prep time:
+                <input id="prep-time" name="ptime" type="number" placeholder="20" />
+              </label>
+            </div>
+            <div class="cook-time">
+              <label for="cook-time">
+                Cook time:
+                <input id="cook-time" name="ctime" type="number" placeholder="17" />
+              </label>
+            </div>
+
+            <div class="servings">
+              <label for="servings">
+                Servings:
+                <input id="servings" name="servings" type="number" placeholder="4" />
+              </label>
+            </div>
+
+            <div class="tags">
+              <label for="tags">
+                Add some tags:
+                <input id="tags" name="tags" type="text" placeholder="Italian, pasta, meat..."
+              /></label>
+            </div>
+
+            <div class="ingredients">
+              <label>
+                Ingredient list:
+                <textarea name="ingredients" placeholder="Spaghetti, bacon, eggs..." rows="15"></textarea>
+              </label>
+            </div>
+
+            <div class="instructions">
+              <label>
+                Instructions:
+                <textarea name="instructions" placeholder="Boil water and add spaghetti..." rows="25"></textarea>
+              </label>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section class="email full_width">
+        <img src="assets/img/logo_pink.webp" alt="" />
+        <p class="pink_text">
+          Modtag inspiration og få besked om <br />
+          nye tilføjede opskrifter i din indbakke
+        </p>
+        <form action="#" method="POST">
+          <input type="email" id="email" name="email" placeholder="email... " required />
+        </form>
+        <button type="submit">Tilmeld dig</button>
+      </section>
+    </main>
     <footer class="grid_1">
       <img class="logo" src="assets/img/logo.webp" alt="Bites logo" />
       <div class="icons">
