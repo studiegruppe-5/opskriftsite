@@ -258,7 +258,8 @@ a {
 
   p {
     font-size: 22px;
-=======
+  }
+}
 /* email****************** */
 
 .email {
@@ -380,7 +381,6 @@ footer hr {
   .menu,
   .submenu {
     width: 400px;
-
   }
 
   /* Når menuen er åben */
@@ -416,7 +416,4 @@ footer hr {
     grid-column: 1;
     grid-row: 3;
   }
-}
-
-@media (width > 1050px) {
 }
