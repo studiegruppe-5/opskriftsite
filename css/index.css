@@ -1,6 +1,6 @@
 
   section{
-    margin-bottom: 10%;
+    margin-bottom: 15%;
   }
 
   /* h3{
@@ -12,10 +12,29 @@
 
 .pink{
     background-color: #F3D7D3;
-    display: grid;
-    align-items: center;
-    padding: 8%;
     margin-bottom: 50px;
+    position: relative;
+}
+
+.pink h2{
+  margin: 10px 0 0;
+}
+
+.pink_grid{
+  padding: 50px;
+}
+
+.favorite_potato{
+  position: absolute;
+  top: -30px;
+  width: clamp(115px, 20vw, 250px);
+}
+
+.favorite_eggplant{
+  position: absolute;
+  width: clamp(137px, 23vw, 300px);
+  bottom: -35px;
+  right: 0;
 }
 
 img{
@@ -88,9 +107,17 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     position: relative;
     gap: 15px;
-    margin-bottom: 10%;
-    padding: 3%;
+    padding: 7% 3%;
   }
+
+  .mushroom_container{
+    display: none;
+  }
+
+  .mitt_container{
+    display: none;
+  }
+
 
   .img_container {
     display: flex;
@@ -110,11 +137,48 @@ button:hover {
     margin: 0;
   }
 
-  @media (width >= 700px) {
-    .pink {
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
+  @media (width >= 500px) {
+    .mushroom_container{
+      display: block;
+      position: absolute;
+      top: -45px;
+      width: clamp(125px, 25vw, 320px);
+      right: -6px;
+      transform: rotate(30deg);
+    }
+
+    .mitt_container {
+      display: block;
+      position: absolute;
+      width: clamp(125px, 24vw, 300px);
+      right: -22px;
+      bottom: -116px;
+    }
+  }
+
+  @media (width >= 768px) {
+    .pink_grid {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 8%;
       }
+
+      .pink h2{
+        margin: 0;
+      }
+
+      .favorite_eggplant{
+        bottom: -55px;
+      }
+
+      .favorite_potato{
+        top: -65px;
+      }
+}
+
+@media (width >= 1024px) {
 }
 
 
