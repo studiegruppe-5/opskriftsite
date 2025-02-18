@@ -1,0 +1,19 @@
+.create_recipe {
+  background-color: var(--beige);
+  padding: 20px;
+}
+
+/* .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+/* for {
+  grid-column: 1 / 2;
+} */
+/* 
+label,
+input,
+button {
+  display: block;
+} */
