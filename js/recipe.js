@@ -9,54 +9,61 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
     const recipe = data.recipes.find((r) => r.id == recipeId);
 
     recipeContainer.innerHTML = `
-        <h1>${recipe.name}</h1>
-        <div class="grid_1-1">
-        <img class="recipe_img" src="${recipe.image}" alt="Image of the specific recipe" />
-        <section class="recipe">
+    <h1>${recipe.name}</h1>
+    <div class="grid_1-1">
+    <img class="recipe_img" src="${recipe.image}" alt="Image of the specific recipe" />
+      <section class="recipe">
         <h2>${recipe.name}</h2>
-            <div class="quick_facts">    
-                <p class="icon_text"> <img src="assets/imgs/recipe_icons/time.svg" alt="Cooking time icon" class="icon"> <b>Prep:</b> ${recipe.prepTimeMinutes} mins <b>Cook:</b> ${recipe.cookTimeMinutes} mins</p>
-
-                <p class="icon_text"> <img src="assets/imgs/recipe_icons/niveau.svg" alt="Difficulty icon" class="icon"> ${recipe.difficulty}</p>
-
-                <p class="icon_text"> <img src="assets/imgs/recipe_icons/servings.svg" alt="Servings icon" class="icon cutlery"> ${recipe.servings}</p>
-            </div>
-
-            <h3>ingredients</h3>
-            <div>
-                <ul class="ingredient_list">
-                ${recipe.ingredients
-                  .map((ingredient, index) => {
-                    let checkboxId = `ingredient_${index}`;
-                    return `
-                    <li>
-                      ${ingredient} 
-                      <input type="checkbox" id="${checkboxId}" />
-                      <label for="${checkboxId}"></label>
-                    </li>
-                  `;
-                  })
-                  .join("")}
-                </ul>
-            </div>
-            <!-- knap til at springe op og ned på siden -->
-            <h3>instructions</h3>
-            <div>
-                <div class="wakeLockContainer">
-                    <button class="preventSleepBtn">
-                    <img src="assets/imgs/recipe_icons/toggle-off.svg" alt="Icon toggled off" id="icon"></button>
-                    <span class="preventText">Prevent the screen from turning off</span>
-                    </div>
-                    <ol class="instruction_list">${recipe.instructions.map((step) => `<li>${step}</li>`).join("")}</ol>
-                </div>
-            </div>
-        </section>
-         <div class="watch">
-            <h3>Watch the recipe as a video</h3>
-            <img src="assets/imgs/fakevideo.webp" alt="Image that's supposed to look like a video of the recipe">
-          </div>
+        <div class="quick_facts">
+          <p class="icon_text"><img src="assets/imgs/recipe_icons/time.svg" alt="Cooking time icon" class="icon" /> <b>Prep:</b> ${recipe.prepTimeMinutes} mins <b>Cook:</b> ${recipe.cookTimeMinutes} mins</p>
+    
+          <p class="icon_text"><img src="assets/imgs/recipe_icons/niveau.svg" alt="Difficulty icon" class="icon" /> ${recipe.difficulty}</p>
+    
+          <p class="icon_text"><img src="assets/imgs/recipe_icons/servings.svg" alt="Servings icon" class="icon cutlery" /> ${recipe.servings}</p>
         </div>
-         
+    
+        <h3>ingredients</h3>
+        <div>
+          <ul class="ingredient_list">
+            ${recipe.ingredients
+              .map((ingredient, index) => {
+                let checkboxId = `ingredient_${index}`;
+                return `
+            <li>
+              ${ingredient}
+              <input type="checkbox" id="${checkboxId}" />
+              <label for="${checkboxId}"></label>
+            </li>
+            `;
+              })
+              .join("")}
+          </ul>
+        </div>
+    
+        <h3>instructions</h3>
+        <div>
+          <div class="wakeLockContainer">
+            <button class="preventSleepBtn">
+              <img src="assets/imgs/recipe_icons/toggle-off.svg" alt="Icon toggled off" id="icon" />
+            </button>
+            <span class="preventText">Prevent the screen from turning off</span>
+          </div>
+          <ol class="instruction_list">
+            ${recipe.instructions
+              .map(
+                (step) => `
+            <li>${step}</li>
+            `
+              )
+              .join("")}
+          </ol>
+        </div>
+      </section>
+        <div class="watch">
+          <h3>Watch the recipe as a video</h3>
+          <img src="assets/imgs/fakevideo.webp" alt="Image that's supposed to look like a video of the recipe" />
+        </div>
+    </div>
                 `;
 
     let wakeLock = null;
