@@ -13,28 +13,72 @@
     <main>
       <h1>Submit your own recipe</h1>
 
-      <h2>Fill out the form below to have your delicious recipe added to our site</h2>
-
       <section>
-        <div class="create_recipe">
+        <h3>Fill out the form below to have your recipe added to our site</h3>
+        <div>
           <form name="create" class="grid">
-            <label for="recipe-name">Recipe name</label>
-            <input id="recipe-name" name="rname" type="text" placeholder="Fx. vegetarian stir-fry" />
-            <input id="prep-time" name="ptime" type="number" placeholder="Fx. 20" />
-            <input id="cook-time" name="ctime" type="number" placeholder="Fx. 17" />
-            <input id="servings" name="servings" type="number" placeholder="Fx. 4" />
-            <label>
-              Ingredient list
-              <textarea name="ingredients" placeholder="Fx. rice, vegetables..." rows="15"></textarea>
-            </label>
-            <label>
-              Instructions
-              <textarea name="instructions" placeholder="Fx. heat oil and add vegetables..." rows="25"></textarea>
-            </label>
-            <input id="tags" name="tags" type="text" placeholder="Fx. italian, pasta, vegetarian..." />
+            <div class="recipe-name">
+              <label for="recipe-name">
+                Recipe name:
+                <input id="recipe-name" name="rname" type="text" placeholder="Spaghetti carbonara..." />
+              </label>
+            </div>
+
+            <div class="prep-time">
+              <label for="prep-time">
+                Prep time:
+                <input id="prep-time" name="ptime" type="number" placeholder="20" />
+              </label>
+            </div>
+            <div class="cook-time">
+              <label for="cook-time">
+                Cook time:
+                <input id="cook-time" name="ctime" type="number" placeholder="17" />
+              </label>
+            </div>
+
+            <div class="servings">
+              <label for="servings">
+                Servings:
+                <input id="servings" name="servings" type="number" placeholder="4" />
+              </label>
+            </div>
+
+            <div class="tags">
+              <label for="tags">
+                Add some tags:
+                <input id="tags" name="tags" type="text" placeholder="Italian, pasta, meat..."
+              /></label>
+            </div>
+
+            <div class="ingredients">
+              <label>
+                Ingredient list:
+                <textarea name="ingredients" placeholder="Spaghetti, bacon, eggs..." rows="15"></textarea>
+              </label>
+            </div>
+
+            <div class="instructions">
+              <label>
+                Instructions:
+                <textarea name="instructions" placeholder="Boil water and add spaghetti..." rows="25"></textarea>
+              </label>
+            </div>
+
             <button type="submit">Submit</button>
           </form>
         </div>
+      </section>
+      <section class="email full_width">
+        <img src="assets/img/logo_pink.webp" alt="" />
+        <p class="pink_text">
+          Modtag inspiration og få besked om <br />
+          nye tilføjede opskrifter i din indbakke
+        </p>
+        <form action="#" method="POST">
+          <input type="email" id="email" name="email" placeholder="email... " required />
+        </form>
+        <button type="submit">Tilmeld dig</button>
       </section>
     </main>
     <footer class="grid_1">
