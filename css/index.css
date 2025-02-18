@@ -38,7 +38,7 @@ button {
     color: #F3D7D3;
     border: none;
     font-family: playfair_display_regular, serif;
-    font-size: 12px;
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
     padding: 3px 20px;
         display: inline-block;
     cursor: pointer; /* Sikrer at det ligner en knap */
