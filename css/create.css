@@ -1,6 +1,7 @@
 section {
   background-color: var(--beige);
   max-width: 90%;
+  margin-bottom: 100px;
 }
 
 .grid {
@@ -56,6 +57,8 @@ textarea {
 
 .grid button {
   background-color: var(--blue);
+  font-family: playfair_display_regular;
+  text-transform: uppercase;
   color: var(--pink);
   padding: 10px;
   font-size: 1.1rem;
