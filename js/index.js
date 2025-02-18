@@ -1,4 +1,6 @@
 let listContainer = document.querySelector(".carousel");
+let listContainer1 = document.querySelector(".pink_grid");
+
 const mycategory = new URLSearchParams(window.location.search).get("tag");
 
 function getLimit() {
@@ -16,17 +18,17 @@ function showRecipes() {
     .then((response) => response.json())
     .then((data) => {
       let recipes = data.recipes.slice(0, limit); // Begræns antallet af opskrifter
-      showFavorites(recipes);
-    })
-    .catch((error) => console.error("Fejl ved hentning af data:", error));
+      showPopular(recipes);
+      showOneCategory(recipes.slice(0, 1));
+    });
 }
 
-function showFavorites(data) {
+function showPopular(data) {
   const markup = data
     .map(
       (recipe) =>
         `
-
+    
          <a class="carousel_container" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
          <img src="${recipe.image}" alt="${recipe.name}" />
          <h4>${recipe.tags[0]}</h4>
@@ -36,6 +38,49 @@ function showFavorites(data) {
     .join("");
 
   listContainer.innerHTML = markup;
+}
+
+// function showOneCategory(data) {
+//   const limit = 1; // Begræns til én opskrift
+//   const selectedRecipe = data.find((recipe) => recipe.tags.includes("Mexican")); // Vælg opskriften med tagget 'easy'
+
+//   if (selectedRecipe) {
+//     const markup = `
+//       <img src="${selectedRecipe.image}" alt="${selectedRecipe.name}" />
+//         <div class="text_flex">
+//           <h2>Are you busy?</h2>
+//           <p>Få inspiration til retter med kort tilberedelsestid og et eller andet andet blaaaaaaaaaaaaaaaaa</p>
+//           <a href="#">
+//             <button>Udforsk</button>
+//           </a>
+//         </div>
+//       `;
+//     listContainer1.innerHTML = markup;
+//   } else {
+//     console.log("Ingen opskrift fundet med det valgte tag.");
+//   }
+// }
+
+function showOneCategory(data) {
+  const limit = 1;
+  const markup = data
+    .map(
+      (recipe) =>
+        `
+         <img src="${recipe.image}" alt="${recipe.name}" />
+          <div class="text_flex">
+            <div class="text_flex">
+            <h2>Are you busy?</h2>
+            <p>Få inspiration til retter med kort tilberedelsestid og et eller andet andet blaaaaaaaaaaaaaaaaa</p>
+            <a href="#">
+              <button>Udforsk</button>
+            </a>
+          </div>
+            `
+    )
+    .join("");
+
+  listContainer1.innerHTML = markup;
 }
 
 // Kald funktionen første gang, når siden indlæses
