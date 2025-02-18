@@ -24,10 +24,14 @@ html {
 }
 
 body {
+  background-image: url(../assets/img/background.webp);
+  background-repeat: repeat;
+  background-size: 35px;
   margin: 0;
 }
 
 section {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   max-width: 90%;
   margin: auto;
 }
@@ -40,33 +44,172 @@ section {
 h1 {
   font-family: Rampart_One, sans-serif;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: clamp(3rem, 8vw, 7rem);
   color: var(--blue);
+  text-align: center;
 }
 
 h2 {
   font-family: playfair_display_black, serif;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: var(--blue);
-  text-align: center;
 }
 
 h3 {
   font-family: playfair_display_semibold, serif;
-  font-size: 16px;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+h4{
+  font-family: playfair_display_semibold, serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: var(--blue);
 }
 
 p {
   font-family: playfair_display_regular, serif;
-  font-size: 12px;
+  font-size: clamp(0.8rem, 2vw, 2rem);
   color: var(--blue);
 }
 
 .pink_text {
   color: var(--pink);
 }
+
+/**************** HEADER ********************/
+/* Grundlæggende styling for header og burger-ikon */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header img {
+  width: 100px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+  cursor: pointer;
+  width: 24px;
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--blue);
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Når burgeren får klassen .open, forvandles den til et kryds */
+.burger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Standardtilstand for menuerne: skjult med display: none */
+.menu,
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+  width: 100vw;
+  height: 400vh;
+  background: #F2EEE9;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+/* Når .open er tilføjet, vises menuen (med flex, men kan også være block) */
+.menu.open,
+.submenu.open {
+  display: block;
+}
+
+/* Indhold i menuerne */
+.menu div,
+.submenu div {
+  padding: 20px;
+}
+
+.menu ul,
+.submenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li,
+.submenu li {
+  font-family: inherit;
+  margin: 15px 0;
+  font-size: 18px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.menu li:hover,
+.submenu li:hover {
+  text-decoration: underline;
+}
+
+/* Placering af illustrationer */
+.illustration1 {
+  top: 64px;
+  position: absolute;
+  right: 78px;
+}
+
+.illustration2 {
+  top: 210px;
+  position: absolute;
+  right: 41px;
+  width: 85px;
+}
+
+.illustration3 {
+  top: 355px;
+  position: absolute;
+  right: 88px;
+}
+
+/* Tilbage-knap i submenu */
+.back-button {
+  display: inline-block;
+  font-size: 30px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+
+
+/***************** HEADER SLUT *************/
 
 /************ MOVING TEXT ****************'*/
 
@@ -117,10 +260,59 @@ p {
 
   p {
     font-size: 22px;
-  }
+=======
+/* email****************** */
 
+.email {
+  padding-top: 4%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  color: var(--pink) !important;
+
+  align-items: center; /* Centrerer indholdet horisontalt */
+}
+
+.email img {
+  max-width: 32%;
+}
+
+.email button {
+  margin: 4%;
+  background-color: var(--pink);
+  color: var(--blue);
+}
+
+.email input {
+  margin: 0 auto;
+  display: block;
+  width: 140%;
+  transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
+  color: var(--blue);
+  border: 0;
+}
+
+@media (width >= 700px) {
   .moving_p {
     font-size: 6em;
     margin: 30px;
   }
+
+  .menu, .submenu {
+    width: 400px;
+
+  }
+
+  /* Når menuen er åben */
+  #menu-toggle:checked ~ .menu {
+    right: 0;
+  }
+
+  #submenu-toggle:checked ~ .submenu {
+    right: 0;
+  }
 }
+
+@media (width > 1050px){
+}
+

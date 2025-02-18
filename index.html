@@ -6,12 +6,76 @@
     <link rel="stylesheet" href="assets/base.css" />
     <link rel="stylesheet" href="css/index.css" />
     <script src="js/index.js" defer></script>
+    <script src="assets/base.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/sbg2xmd.css" />
     <link rel="icon" type="image/webp" href="assets/img/favi.webp" />
     <title>Bites</title>
   </head>
   <body>
+    <header class="main_nav">
+      <a href="index.html">
+        <img src="assets/img/logo.webp" alt="Bites logo" />
+      </a>
+
+      <!-- Burger-menu (udløser visning af hovedmenuen) -->
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Hovedmenu -->
+      <section class="menu">
+        <img
+          src="assets/img/eggplant.webp"
+          alt="Aubergine"
+          class="illustration1"
+        />
+        <img src="assets/img/onion.webp" alt="løg" class="illustration2" />
+        <img
+          src="assets/img/mushroom.webp"
+          alt="Champignon"
+          class="illustration3"
+        />
+        <div>
+          <h4>Udforsk ud fra</h4>
+          <nav>
+            <ul>
+              <li>Alle kategorier</li>
+              <!-- Link til at åbne submenu -->
+              <li class="open-submenu">Cuisines</li>
+              <li>Tilberedningstid</li>
+              <li>Allergener</li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Undermenu -->
+      <section class="submenu">
+        <img src="assets/img/carrot.webp" alt="Gulerod" class="illustration1" />
+        <img
+          src="assets/img/pepper.webp"
+          alt="peberfrugt"
+          class="illustration2"
+        />
+        <div>
+          <!-- Tilbage-knap -->
+          <a href="#" class="back-button">←</a>
+          <h4>Cuisine</h4>
+          <nav>
+            <ul>
+              <li><a href="specific_category.html">Italiensk</a></li>
+              <li><a href="#">Asiatisk</a></li>
+              <li><a href="#">Mellemøstlig</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
     <main>
+      <h1>KArtoffelhovede mos æble</h1>
       <section class="carousel">
         <button id="prevBtn" class="carousel_btn">&#10094;</button>
         <div class="carousel_container">
