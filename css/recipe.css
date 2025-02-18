@@ -181,7 +181,7 @@ section .quick_facts {
   padding: 0;
 }
 
-/**********************/
+/************************/
 
 /******** VIDEO FEATURE **********/
 .watch h3 {
@@ -191,13 +191,8 @@ section .quick_facts {
   margin: 10%;
 }
 
-.play {
-  position: absolute;
-  top: 224%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px; /* Juster størrelsen efter behov */
-  height: auto;
+.watch img {
+  width: 90%;
 }
 /**********************/
 
