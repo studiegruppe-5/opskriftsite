@@ -5,6 +5,17 @@ body {
   margin: 0;
 }
 
+/* GRID */
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.recipe_img {
+  grid-row: 1;
+}
 /* .recipe_ */
 
 .recipe_img {
@@ -19,7 +30,7 @@ body {
   text-align: center;
   padding: 5px;
   box-shadow: -3px 8px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .recipe div,
@@ -184,15 +195,27 @@ section .quick_facts {
 /************************/
 
 /******** VIDEO FEATURE **********/
+
+.watch {
+  display: flex;
+  flex-direction: column; /* Sørger for at h3 og img er på hver sin linje */
+  align-items: center; /* Centrerer indholdet horisontalt */
+  justify-content: center; /* Centrerer indholdet vertikalt */
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
 .watch h3 {
   color: var(--pink);
-  text-align: center;
   background-color: var(--blue);
-  margin: 10%;
+  padding: 10px;
+  width: fit-content; /* Gør at baggrundsfarven ikke fylder hele linjen */
+  border-radius: 5px;
 }
 
 .watch img {
-  width: 90%;
+  width: 336px;
 }
 /**********************/
 
@@ -257,7 +280,7 @@ hr {
 
 .curious {
   /* grid-column: 1 / 4; */
-  grid-row: 1;
+  grid-row: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -265,24 +288,24 @@ hr {
 
 .logo {
   width: 120px;
-  grid-row: 3;
+  grid-row: 1;
   margin: auto;
   padding-top: 30px;
 }
 .icons {
-  grid-row: 4;
+  grid-row: 2;
   /* grid-column: 1 / 4; */
   display: flex;
   justify-content: space-evenly;
 }
 
 footer hr {
-  grid-row: 5;
+  grid-row: 3;
   /* grid-column: 1 / 4; */
 }
 .footer_text {
   /* grid-column: 1 / 4; */
-  grid-row: 6;
+  grid-row: 4;
   display: flex;
   justify-content: center;
 }
@@ -305,13 +328,23 @@ footer hr {
   }
 }
 
+@media (width >= 650px) {
+  .recipe_img {
+    width: 400px;
+  }
+}
+
 @media (width >= 700px) {
   .curious_box {
     max-width: 440px;
   }
+
+  .watch img {
+    width: 450px;
+  }
 }
 
-@media (width >= 900px) {
+@media (width >= 907px) {
   /***** FOOTER ******/
   .grid_1 {
     grid-template-columns: 1fr 1fr;
@@ -346,6 +379,18 @@ footer hr {
 
   .recipe {
     grid-column: 1;
+    grid-row: 1 / 4;
+  }
+
+  .recipe_img {
+    grid-column: 2;
     grid-row: 1;
+    margin-top: 0;
+  }
+}
+
+@media (width >= 1250px) {
+  .recipe_img {
+    width: 520px;
   }
 }
