@@ -6,28 +6,53 @@
     <link rel="stylesheet" href="assets/base.css" />
     <link rel="stylesheet" href="css/recipe.css" />
     <link rel="stylesheet" href="https://use.typekit.net/sbg2xmd.css" />
+    <link rel="icon" type="image/webp" href="assets/img/favi.webp" />
+
     <script src="js/recipe.js" defer></script>
     <title>Recipe</title>
   </head>
   <body>
     <header></header>
-    <main></main>
-    <footer class="grid_1-1">
-      <h3>Are you still curios?</h3>
-      <a class="button" href="categories.html">See all recipes</a>
-      <!-- <img src="" alt="Bites logo"> -->
-      <a href="instagram.com" target="_blank">
-        <img src="assets/imgs/recipe_icons/instagram.svg" alt="Instagram icon" />
-      </a>
-      <a href="facebook.com" target="_blank">
-        <img src="assets/imgs/recipe_icons/facebook.svg" alt="Faceook icon" />
-      </a>
-      <a href="tiktok.com" target="_blank">
-        <img src="assets/imgs/recipe_icons/tiktok.svg" alt="Tiktok icon" />
-      </a>
+    <main>
+      <div class="layout"></div>
+      <section class="curious_box">
+        <h3>Are you still curios?</h3>
+        <a class="button" href="categories.html">See all recipes</a>
+      </section>
+      <section class="email full_width">
+        <img src="assets/img/logo_pink.webp" alt="" />
+        <p class="pink_text">
+          Modtag inspiration og få besked om <br />
+          nye tilføjede opskrifter i din indbakke
+        </p>
+        <form action="#" method="POST">
+          <input type="email" id="email" name="email" placeholder="email... " required />
+        </form>
+        <button type="submit">Tilmeld dig</button>
+      </section>
+    </main>
+    <footer class="grid_1">
+      <div class="curious">
+        <h3>Are you still curios?</h3>
+        <a class="button" href="categories.html">See all recipes</a>
+      </div>
+      <img class="logo" src="assets/img/logo.webp" alt="Bites logo" />
+      <div class="icons">
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="assets/imgs/recipe_icons/instagram.svg" alt="Instagram icon" />
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="assets/imgs/recipe_icons/facebook.svg" alt="Faceook icon" />
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+          <img src="assets/imgs/recipe_icons/tiktok.svg" alt="Tiktok icon" />
+        </a>
+      </div>
       <hr />
-      <p>Privacy policy and cookies</p>
-      <p>Contact</p>
+      <div class="footer_text">
+        <p>Privacy policy and cookies</p>
+        <p>Contact</p>
+      </div>
     </footer>
   </body>
 </html>

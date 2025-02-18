@@ -44,7 +44,14 @@ body {
 
 .favorites {
   display: grid;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+}
+
+.listcontainer {
+  border: red solid 2px;
+  display: grid;
   gap: 0.5em;
 }
 
@@ -56,8 +63,8 @@ body {
   padding: 0 2%;
 }
 .favorites h2 {
-  grid-column: span 2;
-
+  grid-column: 1/5;
+  grid-row: 1;
   margin-bottom: 0;
 }
 
@@ -102,12 +109,6 @@ img {
   text-align: center;
 }
 
-.third div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5em;
-}
-
 .third h2 {
   margin: 3%;
 }
@@ -119,34 +120,14 @@ img {
   padding: 2% 4%;
 }
 
-/* email****************** */
-
-.email {
-  padding-top: 4%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--blue);
-  color: var(--pink) !important;
-
-  align-items: center; /* Centrerer indholdet horisontalt */
+@media (width >=500px) {
+  .favorites {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 }
 
-.email img {
-  max-width: 32%;
-}
-
-.email button {
-  margin: 4%;
-  background-color: var(--pink);
-  color: var(--blue);
-}
-
-.email input {
-  margin: 0 auto;
-  display: block;
-  width: 140%;
-  transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
-  color: var(--blue);
-  border: 0;
-  
+@media (width >= 1000px) {
+  .favorites {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

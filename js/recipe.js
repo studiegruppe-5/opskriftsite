@@ -1,7 +1,7 @@
 // const recipeId = new URLSearchParams(window.location.search).get("id");
-let recipeContainer = document.querySelector("main");
+let recipeContainer = document.querySelector(".layout");
 
-const recipeId = 1;
+const recipeId = 5;
 
 fetch(`https://dummyjson.com/recipes?limit=0`)
   .then((response) => response.json())
@@ -10,7 +10,8 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
 
     recipeContainer.innerHTML = `
         <h1>${recipe.name}</h1>
-        <img src="${recipe.image}" alt="Image of the specific recipe" />
+        <div class="grid_1-1">
+        <img class="recipe_img" src="${recipe.image}" alt="Image of the specific recipe" />
         <section class="recipe">
         <h2>${recipe.name}</h2>
             <div class="quick_facts">    
@@ -54,7 +55,8 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
             <h3>Watch the recipe as a video</h3>
             <img src="assets/imgs/fakevideo.webp" alt="Image that's supposed to look like a video of the recipe">
           </div>
-
+        </div>
+         
                 `;
 
     let wakeLock = null;

@@ -1,6 +1,15 @@
-img {
+body {
+  background-image: url(../assets/img/logo_pink.webp);
+  background-repeat: repeat;
+  background-size: 10%;
+  margin: 0;
+}
+
+/* .recipe_ */
+
+.recipe_img {
   display: block;
-  width: 410px;
+  width: 350px;
   margin: auto;
   padding-bottom: 70px;
 }
@@ -132,6 +141,7 @@ section .quick_facts {
   width: 20px;
   height: auto;
   margin-right: 2px;
+  padding-bottom: 70px;
 }
 
 .cutlery {
@@ -186,6 +196,19 @@ section .quick_facts {
 }
 /**********************/
 
+/******** STILL CURIOUS BOX **********/
+
+.curious_box {
+  background-color: var(--beige);
+  text-align: center;
+  padding-bottom: 25px;
+  box-shadow: -3px 8px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
+  max-width: 305px;
+  padding-top: 1.1px;
+}
+
+/**********************/
 /******** FOOTER **********/
 
 footer {
@@ -199,7 +222,7 @@ footer a {
   text-decoration: none;
 }
 
-footer img {
+.icons img {
   width: 25px;
   display: inline;
   padding: 10px;
@@ -216,8 +239,8 @@ footer p {
   color: var(--pink);
   text-decoration: none;
   padding: 10px;
-  margin-left: 35%;
-  margin-right: 35%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 hr {
@@ -227,24 +250,102 @@ hr {
   width: 80%;
 }
 
+.grid_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.curious {
+  /* grid-column: 1 / 4; */
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  width: 120px;
+  grid-row: 3;
+  margin: auto;
+  padding-top: 30px;
+}
+.icons {
+  grid-row: 4;
+  /* grid-column: 1 / 4; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer hr {
+  grid-row: 5;
+  /* grid-column: 1 / 4; */
+}
+.footer_text {
+  /* grid-column: 1 / 4; */
+  grid-row: 6;
+  display: flex;
+  justify-content: center;
+}
+
+/**********************/
+
+/****** NEWS - SKAL I BASE.CSS *******/
+
+.email {
+  margin-bottom: 60px;
+}
+
 /**********************/
 
 /******** MEDIA QUERIES **********/
 
 @media (width >= 590px) {
-  .grid_1-1 {
-    display: grid;
+  .icons a img {
+    width: 37px;
+  }
+}
+
+@media (width >= 700px) {
+  .curious_box {
+    max-width: 440px;
+  }
+}
+
+@media (width >= 900px) {
+  /***** FOOTER ******/
+  .grid_1 {
     grid-template-columns: 1fr 1fr;
   }
 
-  footer a,
-  footer p,
-  footer hr {
-    grid-column: 1;
+  .curious {
+    grid-column: 2;
+    grid-row: 2 / 4;
   }
 
-  footer h3,
-  footer .button {
-    grid-column: 2;
+  .logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .icons {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  hr {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  /***** RECIPE LAYOUT ******/
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recipe {
+    grid-column: 1;
+    grid-row: 1;
   }
 }
