@@ -1,17 +1,13 @@
 @media (width >= 700px) {
-  .h1 {
-    text-align: center;
-  }
-
   .carousel {
-    background-color: #f2eee9;
+    background-color: var(--pink);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     position: relative;
     overflow: hidden;
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   .carousel_container {
@@ -24,7 +20,7 @@
   }
   .carousel_btn {
     background-color: var(--blue);
-    color: #f2eee9;
+    color: var(--pink);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -40,13 +36,99 @@
   #nextBtn {
     right: 10px;
   }
-  h4 {
+  h1 {
     text-align: center;
-    font-size: 1.2rem;
-    margin-top: 10px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  section {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  h3 {
+    text-align: center;
   }
 
   .first {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--beige);
+  }
+
+  .favorites {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    font-size: larger;
+    padding: 0 2%;
+  }
+
+  .favorites h2 {
+    grid-column: span 2;
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .second {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--beige);
+    padding: 4%;
+    gap: 0.5;
+  }
+  .second img {
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+  }
+
+  .second h3 {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .third {
+    gap: 0.5;
+    background-color: var(--beige);
+    margin-top: 10%;
+    margin-bottom: 6%;
+    padding: 2%;
+    padding-bottom: 6%;
+    text-align: center;
+  }
+
+  .third div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .third h2 {
+    margin: 3%;
+  }
+
+  .third a {
+    text-decoration: none;
+    color: var(--pink);
+    background-color: var(--blue);
+    padding: 2% 4%;
+  }
+
+  /* .first {
     gap: 0.5;
     background-color: var(--beige);
     margin-top: 10%;
@@ -205,17 +287,177 @@
     color: var(--pink);
     background-color: var(--blue);
     padding: 2% 4%;
-  }
+  } */
+
+  /* email****************** */
 
   section.email.full_width {
     align-items: center;
-    /* max-width: 32%; */
-    width: 50%;
-
+    max-width: 32%;
     display: flex;
     flex-direction: column;
     background-color: var(--blue);
     color: var(--pink) !important;
     padding-top: 4%;
   }
+
+  .email {
+    padding-top: 4%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    color: var(--pink) !important;
+
+    align-items: center; /* Centrerer indholdet horisontalt */
+  }
+
+  .email img {
+    max-width: 32%;
+  }
+
+  .email button {
+    margin: 4%;
+    background-color: var(--pink);
+    color: var(--blue);
+  }
+
+  .email input {
+    margin: 0 auto;
+    display: block;
+    width: 140%;
+    transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
+    color: var(--blue);
+    border: 0;
+  }
+}
+@media (width > 500px) {
+  .favorites {
+    grid-template-columns: repeat(auto-fit, minmax(180, 1fr));
+  }
+
+  h1 {
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+    padding-left: 4.5;
+  }
+
+  section {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel {
+    background-color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+  }
+  .carousel_container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    transition: transform 0.5s ease-in-out;
+    padding-right: 4.5em;
+  }
+  .carousel_container img {
+    width: 150%;
+  }
+  .carousel_btn {
+    background-color: var(--blue);
+    color: var(--pink);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #prevBtn {
+    left: 10px;
+  }
+  #nextBtn {
+    right: 10px;
+  }
+
+  .first {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--beige);
+  }
+
+  .second {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--beige);
+  }
+
+  .third {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--beige);
+  }
+
+  .four {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--beige);
+  }
+  .five {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--beige);
+  }
+
+  .six {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--beige);
+  }
+
+  section.email.full_width {
+    align-items: center;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    color: var(--pink) !important;
+    padding-top: 4%;
+  }
+}
+
+.email {
+  padding-top: 4%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  color: var(--pink) !important;
+
+  align-items: center; /* Centrerer indholdet horisontalt */
+}
+
+.email img {
+  max-width: 32%;
+}
+
+.email button {
+  margin: 4%;
+  background-color: var(--pink);
+  color: var(--blue);
+}
+
+.email input {
+  margin: 0 auto;
+  display: block;
+  width: 140%;
+  transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
+  color: var(--blue);
+  border: 0;
 }
