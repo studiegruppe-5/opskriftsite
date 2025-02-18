@@ -256,7 +256,7 @@ section .quick_facts {
     width: 450px;
   }
 }
-
+@media (width >= 907px) {
   /***** RECIPE LAYOUT ******/
 
   .grid_1-1 {
@@ -274,10 +274,12 @@ section .quick_facts {
     grid-row: 1;
     margin-top: 0;
   }
-}
 
-@media (width >= 1250px) {
   .recipe_img {
-    width: 520px;
+    width: 80%;
+  }
+
+  .watch img {
+    width: 90%;
   }
 }
