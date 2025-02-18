@@ -44,7 +44,14 @@ body {
 
 .favorites {
   display: grid;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+}
+
+.listcontainer {
+  border: red solid 2px;
+  display: grid;
   gap: 0.5em;
 }
 
@@ -56,8 +63,8 @@ body {
   padding: 0 2%;
 }
 .favorites h2 {
-  grid-column: span 2;
-
+  grid-column: 1/5;
+  grid-row: 1;
   margin-bottom: 0;
 }
 
@@ -102,12 +109,6 @@ img {
   text-align: center;
 }
 
-.third div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5em;
-}
-
 .third h2 {
   margin: 3%;
 }
@@ -117,4 +118,16 @@ img {
   color: var(--pink);
   background-color: var(--blue);
   padding: 2% 4%;
+}
+
+@media (width >=500px) {
+  .favorites {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (width >= 1000px) {
+  .favorites {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
