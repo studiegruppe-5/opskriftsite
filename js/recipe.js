@@ -10,6 +10,7 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
 
     recipeContainer.innerHTML = `
         <h1>${recipe.name}</h1>
+        <div class="grid_1-1">
         <img class="recipe_img" src="${recipe.image}" alt="Image of the specific recipe" />
         <section class="recipe">
         <h2>${recipe.name}</h2>
@@ -50,6 +51,7 @@ fetch(`https://dummyjson.com/recipes?limit=0`)
                 </div>
             </div>
         </section>
+        </div>
          
                 `;
 
