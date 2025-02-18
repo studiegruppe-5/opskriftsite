@@ -26,10 +26,11 @@ function showFavorites(data) {
     .map(
       (recipe) =>
         `
-          <div class="carousel_container">
-          <img src="${recipe.image}" alt="${recipe.name}" />
-          <h3>${recipe.tags[0]}</h3>
-          </div>
+
+         <a class="carousel_container" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
+         <img src="${recipe.image}" alt="${recipe.name}" />
+         <h4>${recipe.tags[0]}</h4>
+         </a>
           `
     )
     .join("");

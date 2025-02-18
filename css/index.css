@@ -102,25 +102,10 @@ button:hover {
   padding: 20px 5px;
 }
 
-.favorites {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5em;
+.carousel_h2 {
+  text-align: center;
+  background-color: #f2eee9;
 }
-
-/* .carousel_btn {
-  background-color: #F2EEE9;
-  color: black;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.carousel_btn:hover {
-  background-color: #555;
-} */
 
 /**********KARUSSEL SLUT **************/
 
