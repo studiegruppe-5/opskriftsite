@@ -1,4 +1,86 @@
-@media (width >= 700px) {
+img {
+  max-width: 100%;
+}
+
+.carousel {
+  background-color: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel h4 {
+  margin: 0;
+  text-align: center;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel_container {
+  width: 100%;
+  padding: 20px 5px;
+}
+
+.carousel_btn {
+  background-color: var(--pink);
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.carousel_btn:hover {
+  background-color: #555;
+}
+
+/* section 3*************************** */
+
+.third {
+  gap: 0.5;
+  background-color: var(--beige);
+  margin-top: 6%;
+  margin-bottom: 6%;
+  padding: 2%;
+  padding-bottom: 6%;
+  text-align: center;
+}
+
+.third h2 {
+  margin: 3%;
+}
+
+.third a {
+  text-decoration: none;
+  color: var(--pink);
+  background-color: var(--blue);
+  padding: 2% 4%;
+}
+
+.favorites {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+}
+
+@media (width >=500px) {
+  .favorites {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (width >= 1000px) {
+  .favorites {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* @media (width >= 700px) {
   .carousel {
     background-color: var(--pink);
     display: flex;
@@ -126,253 +208,6 @@
     color: var(--pink);
     background-color: var(--blue);
     padding: 2% 4%;
-  }
-
-  /* email****************** */
-
-  section.email.full_width {
-    align-items: center;
-    max-width: 32%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--blue);
-    color: var(--pink) !important;
-    padding-top: 4%;
-  }
-
-  .email {
-    padding-top: 4%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--blue);
-    color: var(--pink) !important;
-
-    align-items: center; /* Centrerer indholdet horisontalt */
-  }
-
-  .email img {
-    max-width: 32%;
-  }
-
-  .email button {
-    margin: 4%;
-    background-color: var(--pink);
-    color: var(--blue);
-  }
-
-  .email input {
-    margin: 0 auto;
-    display: block;
-    width: 140%;
-    transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
-    color: var(--blue);
-    border: 0;
-  }
-}
-@media (width > 500px) {
-  .favorites {
-    grid-template-columns: repeat(auto-fit, minmax(180, 1fr));
-  }
-
-  h1 {
-    text-align: center;
-  }
-  h3 {
-    text-align: center;
-    padding-left: 4.5;
-  }
-
-  section {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  /* .section.first{
-
   } */
 
-  .carousel {
-    background-color: var(--pink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 5em;
-  }
-  .carousel_container {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    transition: transform 0.5s ease-in-out;
-    padding-right: 4.5em;
-  }
-  .carousel_container img {
-    width: 150%;
-  }
-  .carousel_btn {
-    background-color: var(--blue);
-    color: var(--pink);
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1.5rem;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #prevBtn {
-    left: 10px;
-  }
-  #nextBtn {
-    right: 10px;
-  }
-  .first {
-    display: flex;
-    justify-content: center; /* Centrerer hele sektionen */
-    align-items: center;
-    background-color: var(--beige);
-    padding: 0%;
-    text-align: center;
-  }
-
-  .second{
-    padding: 0%;
-  }
-
-  .third{
-    padding: 0%;
-  }
-
-  .favorites {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .favorites h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--blue);
-    margin-bottom: 20px;
-  }
-
-  .image_container {
-    display: flex;
-    justify-content: center; /* Centrerer billederne */
-    gap: 20px; /* Giver afstand mellem billederne */
-  }
-
-  .image_container img {
-    width: 200px; /* Juster størrelsen på billederne */
-    margin-top: 3em;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .category_text {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Matcher billedafstand */
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--blue);
-    margin-top: 10px;
-  }
-
-  .first {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--beige);
-  }
-
-  .second {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--beige);
-  }
-
-  .third {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--beige);
-  }
-
-  .four {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--beige);
-  }
-  .five {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--beige);
-  }
-
-  .six {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--beige);
-  }
-  .six a {
-    text-decoration: none;
-    color: var(--pink);
-    background-color: var(--blue);
-    padding: 2% 4%;
-  }
-
-  .full_width {
-    margin-top: 3em;
-    margin-bottom: 3em;
-  }
-
-  section.email.full_width {
-    align-items: center;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--blue);
-    color: var(--pink) !important;
-    padding-top: 4%;
-  }
-}
-
-.email {
-  padding-top: 4%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--blue);
-  color: var(--pink) !important;
-
-  align-items: center; /* Centrerer indholdet horisontalt */
-}
-
-.email img {
-  max-width: 32%;
-}
-
-.email button {
-  margin: 4%;
-  background-color: var(--pink);
-  color: var(--blue);
-}
-
-.email input {
-  margin: 0 auto;
-  display: block;
-  width: 140%;
-  transform: translateX(-12%); /* Flytter input-feltet til venstre for at centere det */
-  color: var(--blue);
-  border: 0;
-}
-}
-
-@media (width > 1000px) {
-    .favorites{
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
+/* email****************** */
