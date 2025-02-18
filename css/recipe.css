@@ -232,93 +232,6 @@ section .quick_facts {
 }
 
 /**********************/
-/******** FOOTER **********/
-
-footer {
-  background-color: var(--pink);
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-.icons img {
-  width: 25px;
-  display: inline;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-footer p {
-  display: inline;
-  padding: 15px;
-}
-
-.button {
-  background-color: var(--blue);
-  color: var(--pink);
-  text-decoration: none;
-  padding: 10px;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-
-hr {
-  border: none;
-  height: 2px;
-  background-color: var(--blue);
-  width: 80%;
-}
-
-.grid_1 {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.curious {
-  /* grid-column: 1 / 4; */
-  grid-row: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logo {
-  width: 120px;
-  grid-row: 1;
-  margin: auto;
-  padding-top: 30px;
-}
-.icons {
-  grid-row: 2;
-  /* grid-column: 1 / 4; */
-  display: flex;
-  justify-content: space-evenly;
-}
-
-footer hr {
-  grid-row: 3;
-  /* grid-column: 1 / 4; */
-}
-.footer_text {
-  /* grid-column: 1 / 4; */
-  grid-row: 4;
-  display: flex;
-  justify-content: center;
-}
-
-/**********************/
-
-/****** NEWS - SKAL I BASE.CSS *******/
-
-.email {
-  margin-bottom: 60px;
-}
-
-/**********************/
 
 /******** MEDIA QUERIES **********/
 
@@ -343,32 +256,6 @@ footer hr {
     width: 450px;
   }
 }
-
-@media (width >= 907px) {
-  /***** FOOTER ******/
-  .grid_1 {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .curious {
-    grid-column: 2;
-    grid-row: 2 / 4;
-  }
-
-  .logo {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .icons {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  hr {
-    grid-column: 1;
-    grid-row: 3;
-  }
 
   /***** RECIPE LAYOUT ******/
 
