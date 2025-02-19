@@ -13,57 +13,155 @@
     <title>Category</title>
   </head>
   <body>
-    <h1>Recipes</h1>
+    <header class="main_nav">
+      <a href="index.html">
+        <img src="assets/img/logo.webp" alt="Bites logo" />
+      </a>
 
-    <select name="Filter" id="selectElement">
-      <option value="all">All recipes</option>
-      <option value="Italian">Italian</option>
-      <option value="Indian">Indian</option>
-      <option value="Asian">Asian</option>
-      <option value="Dessert">Dessert</option>
-      <option value="Vegetarian">Vegetarian</option>
-    </select>
+      <!-- Burger-menu (udløser visning af hovedmenuen) -->
+      <div class="header_right">
+        <div>
+          <img
+            class="search"
+            src="assets/img/search.webp"
+            alt="Search function"
+          />
+        </div>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
-    <section>
-      <div class="recipes-container"></div>
-    </section>
+      <!-- Hovedmenu -->
+      <section class="menu">
+        <img
+          src="assets/img/eggplant.webp"
+          alt="Aubergine"
+          class="illustration1"
+        />
+        <img src="assets/img/onion.webp" alt="løg" class="illustration2" />
+        <img
+          src="assets/img/mushroom.webp"
+          alt="Champignon"
+          class="illustration3"
+        />
+        <div>
+          <h4>Explore by</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="specific_category.html?filter=all">All recipes</a>
+              </li>
+              <!-- Link til at åbne submenu -->
+              <li class="open-submenu">Cuisines</li>
+              <li>Cooking time</li>
+              <li>Allergens</li>
+            </ul>
+          </nav>
+          <h4>Be a part of Bites</h4>
+          <a class="create_your_own" href="create.html">Add your own recipe</a>
+        </div>
+      </section>
 
-    <section class="email full_width">
-      <img src="assets/img/logo_pink.webp" alt="" />
-      <p class="pink_text max_width">Receive inspiration and get notified about new added recipes in your inbox.</p>
-      <form action="#" method="POST">
-        <input type="email" id="email" name="email" placeholder="email... " required />
-      </form>
-      <button type="submit">Sign up</button>
-    </section>
+      <!-- Undermenu -->
+      <section class="submenu">
+        <img src="assets/img/carrot.webp" alt="Gulerod" class="illustration1" />
+        <img
+          src="assets/img/pepper.webp"
+          alt="peberfrugt"
+          class="illustration2"
+        />
+        <div>
+          <!-- Tilbage-knap -->
+          <a href="#" class="back-button">←</a>
+          <h4>Cuisine</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="specific_category.html?filter=italian">Italian</a>
+              </li>
+              <li><a href="specific_category.html?filter=asian">Asian</a></li>
+              <li><a href="specific_category.html?filter=indian">Indian</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <h1>Recipes</h1>
+
+      <select name="Filter" id="selectElement">
+        <option value="all">All recipes</option>
+        <option value="Italian">Italian</option>
+        <option value="Indian">Indian</option>
+        <option value="Asian">Asian</option>
+        <option value="Dessert">Dessert</option>
+        <option value="Vegetarian">Vegetarian</option>
+      </select>
+
+      <section>
+        <div class="recipes-container"></div>
+      </section>
+
+      <section class="email full_width">
+        <img src="assets/img/logo_pink.webp" alt="" />
+        <p class="pink_text max_width">
+          Receive inspiration and get notified about new added recipes in your
+          inbox.
+        </p>
+        <form action="#" method="POST">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email... "
+            required
+          />
+        </form>
+        <button type="submit">Sign up</button>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <img
+          class="footer_logo"
+          src="assets/img/footer_logo.webp"
+          alt="Bites logo"
+        />
+        <div class="icons">
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="assets/imgs/recipe_icons/instagram.svg"
+              alt="Instagram icon"
+            />
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img
+              src="assets/imgs/recipe_icons/facebook.svg"
+              alt="Faceook icon"
+            />
+          </a>
+          <a href="https://www.tiktok.com" target="_blank">
+            <img src="assets/imgs/recipe_icons/tiktok.svg" alt="Tiktok icon" />
+          </a>
+        </div>
+        <hr />
+        <div class="footer_text">
+          <p>Privacy policy and cookies</p>
+          <p>Contact</p>
+        </div>
+      </div>
+
+      <div class="curious">
+        <h3>Are you still curious?</h3>
+        <button><a href="specific_category.html">All recipes</a></button>
+        <div class="footer_eggplant">
+          <img src="assets/img/eggplant.webp" alt="eggplant" />
+        </div>
+      </div>
+    </footer>
   </body>
-  <footer>
-    <div>
-      <img class="footer_logo" src="assets/img/footer_logo.webp" alt="Bites logo" />
-      <div class="icons">
-        <a href="https://www.instagram.com" target="_blank">
-          <img src="assets/imgs/recipe_icons/instagram.svg" alt="Instagram icon" />
-        </a>
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="assets/imgs/recipe_icons/facebook.svg" alt="Faceook icon" />
-        </a>
-        <a href="https://www.tiktok.com" target="_blank">
-          <img src="assets/imgs/recipe_icons/tiktok.svg" alt="Tiktok icon" />
-        </a>
-      </div>
-      <hr />
-      <div class="footer_text">
-        <p>Privacy policy and cookies</p>
-        <p>Contact</p>
-      </div>
-    </div>
-
-    <div class="curious">
-      <h3>Are you still curious?</h3>
-      <button><a href="specific_category.html">All recipes</a></button>
-      <div class="footer_eggplant">
-        <img src="assets/img/eggplant.webp" alt="eggplant" />
-      </div>
-    </div>
-  </footer>
 </html>

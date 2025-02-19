@@ -13,7 +13,82 @@
     <title>Create</title>
   </head>
   <body>
-    <header></header>
+    <header class="main_nav">
+      <a href="index.html">
+        <img src="assets/img/logo.webp" alt="Bites logo" />
+      </a>
+
+      <!-- Burger-menu (udløser visning af hovedmenuen) -->
+      <div class="header_right">
+        <div>
+          <img
+            class="search"
+            src="assets/img/search.webp"
+            alt="Search function"
+          />
+        </div>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Hovedmenu -->
+      <section class="menu">
+        <img
+          src="assets/img/eggplant.webp"
+          alt="Aubergine"
+          class="illustration1"
+        />
+        <img src="assets/img/onion.webp" alt="løg" class="illustration2" />
+        <img
+          src="assets/img/mushroom.webp"
+          alt="Champignon"
+          class="illustration3"
+        />
+        <div>
+          <h4>Explore by</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="specific_category.html?filter=all">All recipes</a>
+              </li>
+              <!-- Link til at åbne submenu -->
+              <li class="open-submenu">Cuisines</li>
+              <li>Cooking time</li>
+              <li>Allergens</li>
+            </ul>
+          </nav>
+          <h4>Be a part of Bites</h4>
+          <a class="create_your_own" href="create.html">Add your own recipe</a>
+        </div>
+      </section>
+
+      <!-- Undermenu -->
+      <section class="submenu">
+        <img src="assets/img/carrot.webp" alt="Gulerod" class="illustration1" />
+        <img
+          src="assets/img/pepper.webp"
+          alt="peberfrugt"
+          class="illustration2"
+        />
+        <div>
+          <!-- Tilbage-knap -->
+          <a href="#" class="back-button">←</a>
+          <h4>Cuisine</h4>
+          <nav>
+            <ul>
+              <li>
+                <a href="specific_category.html?filter=italian">Italian</a>
+              </li>
+              <li><a href="specific_category.html?filter=asian">Asian</a></li>
+              <li><a href="specific_category.html?filter=indian">Indian</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
     <main>
       <h1>Submit your own recipe</h1>
 
@@ -24,48 +99,80 @@
             <div class="recipe-name">
               <label for="recipe-name">
                 Recipe name:
-                <input id="recipe-name" name="rname" type="text" placeholder="Spaghetti carbonara..." />
+                <input
+                  id="recipe-name"
+                  name="rname"
+                  type="text"
+                  placeholder="Spaghetti carbonara..."
+                />
               </label>
             </div>
 
             <div class="prep-time">
               <label for="prep-time">
                 Prep time:
-                <input id="prep-time" name="ptime" type="number" placeholder="20" />
+                <input
+                  id="prep-time"
+                  name="ptime"
+                  type="number"
+                  placeholder="20"
+                />
               </label>
             </div>
             <div class="cook-time">
               <label for="cook-time">
                 Cook time:
-                <input id="cook-time" name="ctime" type="number" placeholder="17" />
+                <input
+                  id="cook-time"
+                  name="ctime"
+                  type="number"
+                  placeholder="17"
+                />
               </label>
             </div>
 
             <div class="servings">
               <label for="servings">
                 Servings:
-                <input id="servings" name="servings" type="number" placeholder="4" />
+                <input
+                  id="servings"
+                  name="servings"
+                  type="number"
+                  placeholder="4"
+                />
               </label>
             </div>
 
             <div class="tags">
               <label for="tags">
                 Add some tags:
-                <input id="tags" name="tags" type="text" placeholder="Italian, pasta, meat..."
+                <input
+                  id="tags"
+                  name="tags"
+                  type="text"
+                  placeholder="Italian, pasta, meat..."
               /></label>
             </div>
 
             <div class="ingredients">
               <label>
                 Ingredient list:
-                <textarea name="ingredients" placeholder="Spaghetti, bacon, eggs..." rows="15"></textarea>
+                <textarea
+                  name="ingredients"
+                  placeholder="Spaghetti, bacon, eggs..."
+                  rows="15"
+                ></textarea>
               </label>
             </div>
 
             <div class="instructions">
               <label>
                 Instructions:
-                <textarea name="instructions" placeholder="Boil water and add spaghetti..." rows="25"></textarea>
+                <textarea
+                  name="instructions"
+                  placeholder="Boil water and add spaghetti..."
+                  rows="25"
+                ></textarea>
               </label>
             </div>
 
@@ -75,9 +182,18 @@
       </section>
       <section class="email full_width">
         <img src="assets/img/logo_pink.webp" alt="" />
-        <p class="pink_text max_width">Receive inspiration and get notified about new added recipes in your inbox.</p>
+        <p class="pink_text max_width">
+          Receive inspiration and get notified about new added recipes in your
+          inbox.
+        </p>
         <form action="#" method="POST">
-          <input type="email" id="email" name="email" placeholder="email... " required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email... "
+            required
+          />
         </form>
         <button type="submit">Sign up</button>
       </section>
@@ -85,13 +201,23 @@
 
     <footer>
       <div>
-        <img class="footer_logo" src="assets/img/footer_logo.webp" alt="Bites logo" />
+        <img
+          class="footer_logo"
+          src="assets/img/footer_logo.webp"
+          alt="Bites logo"
+        />
         <div class="icons">
           <a href="https://www.instagram.com" target="_blank">
-            <img src="assets/imgs/recipe_icons/instagram.svg" alt="Instagram icon" />
+            <img
+              src="assets/imgs/recipe_icons/instagram.svg"
+              alt="Instagram icon"
+            />
           </a>
           <a href="https://www.facebook.com" target="_blank">
-            <img src="assets/imgs/recipe_icons/facebook.svg" alt="Faceook icon" />
+            <img
+              src="assets/imgs/recipe_icons/facebook.svg"
+              alt="Faceook icon"
+            />
           </a>
           <a href="https://www.tiktok.com" target="_blank">
             <img src="assets/imgs/recipe_icons/tiktok.svg" alt="Tiktok icon" />
