@@ -316,8 +316,8 @@ hr {
   width: 100%;
 }
 
-.logo {
-  width: 120px;
+.footer_logo {
+  width: 130px;
   grid-row: 1;
   margin: auto;
   padding-top: 30px;
@@ -372,6 +372,10 @@ padding-bottom: 50px;
 
 .footer_eggplant{
   right: -8%;
+}
+
+.footer_logo{
+  width: 160px;
 }
 }
 
