@@ -42,11 +42,21 @@ body {
   background-color: var(--beige);
 }
 
-.favorites {
+/* .favorites {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   gap: 0.5em;
+} */
+
+.favorites {
+  display: flex;
+  gap: 10px;
+}
+
+.recipe {
+  padding: 10px;
+  text-align: center;
 }
 
 .listcontainer {
