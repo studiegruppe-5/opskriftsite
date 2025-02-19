@@ -18,9 +18,10 @@
 
 html {
   --blue: #00408d;
-  --pink: #f3d7d3;
+  --babypink: #f3d7d3;
   --banner: #f8b7b0;
   --beige: #f2eee9;
+  --pink: #F8B7B0;
 }
 
 body {
@@ -71,7 +72,7 @@ h4 {
 
 p {
   font-family: playfair_display_regular, serif;
-  font-size: clamp(0.8rem, 2vw, 2rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
   color: var(--blue);
 }
 
@@ -90,8 +91,8 @@ header {
 }
 
 header img {
-  width: 100px;
-  padding: 10px;
+  width: clamp(70px, 12vw, 125px);
+  padding: 4px 5px 0px;
 }
 
 a {
@@ -278,7 +279,7 @@ a {
 /******** FOOTER **********/
 
 footer {
-  background-color: var(--pink);
+  background-color: var(--babypink);
   text-align: center;
   margin: 0;
   padding: 20px;
@@ -376,6 +377,10 @@ padding-bottom: 50px;
 
 .footer_logo{
   width: 160px;
+}
+
+.curious{
+  margin-bottom: 40px;
 }
 }
 

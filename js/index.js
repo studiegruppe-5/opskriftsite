@@ -1,4 +1,4 @@
-let listContainer = document.querySelector(".carousel");
+let listContainer = document.querySelector(".category_container");
 let listContainer1 = document.querySelector(".pink_grid");
 
 const mycategory = new URLSearchParams(window.location.search).get("tag");
@@ -29,7 +29,7 @@ function showPopular(data) {
       (recipe) =>
         `
     
-         <a class="carousel_container" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
+         <a class="category_box" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
          <img src="${recipe.image}" alt="${recipe.name}" />
          <h4>${recipe.tags[0]}</h4>
          </a>
