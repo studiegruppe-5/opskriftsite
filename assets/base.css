@@ -37,7 +37,7 @@ section {
   margin: auto;
 }
 
-img{
+img {
   width: 100%;
 }
 
@@ -306,6 +306,10 @@ a {
   border: 0;
 }
 
+.max_width {
+  max-width: 300px;
+  text-align: center;
+}
 /******** FOOTER **********/
 
 footer {
