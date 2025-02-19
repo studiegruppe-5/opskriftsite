@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/base.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="js/index.js" defer></script>
+    <!-- <script src="js/index.js" defer></script> -->
     <script src="assets/base.js" defer></script>
     <link rel="icon" type="image/webp" href="assets/img/favi.webp" />
     <title>Bites</title>
@@ -25,17 +25,9 @@
 
       <!-- Hovedmenu -->
       <section class="menu">
-        <img
-          src="assets/img/eggplant.webp"
-          alt="Aubergine"
-          class="illustration1"
-        />
+        <img src="assets/img/eggplant.webp" alt="Aubergine" class="illustration1" />
         <img src="assets/img/onion.webp" alt="løg" class="illustration2" />
-        <img
-          src="assets/img/mushroom.webp"
-          alt="Champignon"
-          class="illustration3"
-        />
+        <img src="assets/img/mushroom.webp" alt="Champignon" class="illustration3" />
         <div>
           <h4>Udforsk ud fra</h4>
           <nav>
@@ -53,11 +45,7 @@
       <!-- Undermenu -->
       <section class="submenu">
         <img src="assets/img/carrot.webp" alt="Gulerod" class="illustration1" />
-        <img
-          src="assets/img/pepper.webp"
-          alt="peberfrugt"
-          class="illustration2"
-        />
+        <img src="assets/img/pepper.webp" alt="peberfrugt" class="illustration2" />
         <div>
           <!-- Tilbage-knap -->
           <a href="#" class="back-button">←</a>
@@ -75,13 +63,7 @@
 
     <main>
       <section class="hero full-width">
-        <video
-          src="https://fridalindbjerg.dk/t07/sandbox/food_bites1.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-        ></video>
+        <video src="https://fridalindbjerg.dk/t07/sandbox/food_bites1.mp4" autoplay loop muted playsinline></video>
 
         <div class="overlay-logo">
           <img src="assets/img/blue_logo.webp" alt="Logo" />
@@ -90,8 +72,19 @@
 
       <section class="popular">
         <h2>Popular categories</h2>
-        <div class="category_container1">
-          <div class="category_box"></div>
+        <div class="category_container">
+          <a href="specific_category.html?filter=italian">
+            <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="${recipe.name}" />
+            <h4>Italian</h4>
+          </a>
+          <a href="specific_category.html?filter=vegetarian">
+            <img src="https://cdn.dummyjson.com/recipe-images/9.webp" alt="${recipe.name}" />
+            <h4>Vegetarian</h4>
+          </a>
+          <a href="specific_category.html?filter=dessert">
+            <img src="https://cdn.dummyjson.com/recipe-images/3.webp" alt="${recipe.name}" />
+            <h4>Dessert</h4>
+          </a>
         </div>
       </section>
 
@@ -99,7 +92,16 @@
         <div class="favorite_potato">
           <img src="assets/img/potato.webp" alt="Kartoffel" />
         </div>
-        <div class="pink_grid"></div>
+        <div class="pink_grid">
+          <img src="https://cdn.dummyjson.com/recipe-images/29.webp" alt="${recipe.name}" />
+          <div class="text_flex">
+            <h2>Are you busy?</h2>
+            <p>Need meal inspiration? Sometimes, the simplest ingredients can create the most delicious dishes. You should try our mouthwatering Lebanese Falafel Wrap!</p>
+            <a href="recipe.html?id=29">
+              <button>Explore</button>
+            </a>
+          </div>
+        </div>
         <div class="favorite_eggplant">
           <img src="assets/img/eggplant.webp" alt="Aubergine" />
         </div>
@@ -113,54 +115,64 @@
       </section>
 
       <section class="thirdBlock">
-        <!-- <div class="grid_1_1">
+        <div class="grid_1_1">
           <div class="mushroom_container">
             <img src="assets/img/mushroom.webp" alt="Mushroom" />
           </div>
           <div class="img_container">
-            <img src="assets/img/fyld.jpg" alt="Pizza" />
+            <img src="https://cdn.dummyjson.com/recipe-images/21.webp" alt="${recipe.name}" />
           </div>
           <div class="text_flex">
-            <h3>Healthy options</h3>
-            
+            <h3>Asian options</h3>
+
             <div class="text_box">
-              <p>
-                Det behøver ikke at være kedeligt at spise sundt. Find
-                inspiration til sunde og smagsfulde retter.
-              </p>
+              <p>Craving something delicious? With the perfect blend of bold flavors and fresh ingredients, you can create a meal that excites your taste buds. Try our Asian recipes!</p>
+
+              <a href="specific_category.html?filter=asian">
+                <button>Explore</button>
+              </a>
             </div>
-            
-            <button>Udforsk</button>
           </div>
-        </div> -->
+        </div>
       </section>
 
       <section class="popular">
-        <h2>Popular categories</h2>
-        <div class="category_container"></div>
+        <h2>Popular recipes</h2>
+        <div class="category_container">
+          <a href="recipe.html?id=18">
+            <img src="https://cdn.dummyjson.com/recipe-images/18.webp" alt="${recipe.name}" />
+            <h4>Korean Bibimbap</h4>
+          </a>
+          <a href="recipe.html?id=5">
+            <img src="https://cdn.dummyjson.com/recipe-images/5.webp" alt="${recipe.name}" />
+            <h4>Mango Salsa Chicken</h4>
+          </a>
+          <a href="recipe.html?id=10">
+            <img src="https://cdn.dummyjson.com/recipe-images/10.webp" alt="${recipe.name}" />
+            <h4>Shrimp Scampi Pasta</h4>
+          </a>
+        </div>
       </section>
 
       <section class="lastBlock">
-        <!-- <div class="grid_1_1">
+        <div class="grid_1_1">
           <div class="img_container">
-            <img src="assets/img/fyld.jpg" alt="Pizza" />
+            <img src="https://cdn.dummyjson.com/recipe-images/23.webp" alt="${recipe.name}" />
           </div>
           <div class="text_flex">
             <h3>Sweets</h3>
 
             <div class="text_box">
-              <p>
-                Kan du rigtig meget godt lide kage og alt muligt andet og huller
-                i tænderne så spis alt vores lækre sukkermummelum.
-              </p>
+              <p>Got a sweet tooth? Even the simplest ingredients can transform into the most delightful desserts. Indulge in our goto dessert!</p>
             </div>
+            <a href="specific_category.html?filter=dessert"></a>
 
-            <button>Udforsk</button>
+            <button>Explore</button>
           </div>
           <div class="mitt_container">
             <img src="assets/img/mitt.webp" alt="Baking mitt" />
           </div>
-        </div> -->
+        </div>
       </section>
       <section class="email full_width">
         <img src="assets/img/logo_pink.webp" alt="" />
@@ -169,13 +181,7 @@
           nye tilføjede opskrifter i din indbakke
         </p>
         <form action="#" method="POST">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email... "
-            required
-          />
+          <input type="email" id="email" name="email" placeholder="email... " required />
         </form>
         <button type="submit">Tilmeld dig</button>
       </section>
@@ -183,23 +189,13 @@
 
     <footer>
       <div>
-        <img
-          class="footer_logo"
-          src="assets/img/footer_logo.webp"
-          alt="Bites logo"
-        />
+        <img class="footer_logo" src="assets/img/footer_logo.webp" alt="Bites logo" />
         <div class="icons">
           <a href="https://www.instagram.com" target="_blank">
-            <img
-              src="assets/imgs/recipe_icons/instagram.svg"
-              alt="Instagram icon"
-            />
+            <img src="assets/imgs/recipe_icons/instagram.svg" alt="Instagram icon" />
           </a>
           <a href="https://www.facebook.com" target="_blank">
-            <img
-              src="assets/imgs/recipe_icons/facebook.svg"
-              alt="Faceook icon"
-            />
+            <img src="assets/imgs/recipe_icons/facebook.svg" alt="Faceook icon" />
           </a>
           <a href="https://www.tiktok.com" target="_blank">
             <img src="assets/imgs/recipe_icons/tiktok.svg" alt="Tiktok icon" />

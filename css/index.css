@@ -23,7 +23,6 @@ video {
 
 /* HERO SLUT */
 
-
 .pink {
   background-color: var(--babypink);
   margin-bottom: 10%;
@@ -55,7 +54,6 @@ img {
   width: 100%;
 }
 
-
 /************* POPULAR SECTION ************/
 
 .popular {
@@ -64,11 +62,12 @@ img {
   margin-bottom: 10%;
 }
 
-.popular h2{
+.popular h2 {
   padding-top: 3%;
 }
 
-.popular h2, h4{
+.popular h2,
+h4 {
   margin: 0;
 }
 
@@ -80,20 +79,10 @@ img {
   padding: 3% 3%;
 }
 
-.category_container1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3%;
-  padding: 3% 3%;
-}
-
-
 /* .popular_box {
   width: 100%;
   padding: 20px 5px;
 } */
-
 
 /**********KARUSSEL SLUT **************/
 
@@ -137,7 +126,7 @@ img {
   margin: 0;
 }
 
-.email{
+.email {
   margin-bottom: 10%;
 }
 
@@ -159,10 +148,13 @@ img {
     bottom: -85px;
   }
 
-.popular, .pink, .img_rul, .grid_1_1, .email{
+  .popular,
+  .pink,
+  .img_rul,
+  .grid_1_1,
+  .email {
     margin-bottom: 8%;
-
-  } 
+  }
 }
 
 @media (width >= 768px) {
@@ -196,7 +188,7 @@ img {
     height: 50vh;
     overflow: hidden;
   }
-  
+
   .mitt_container {
     bottom: -140px;
   }

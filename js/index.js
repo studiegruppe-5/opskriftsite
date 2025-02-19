@@ -1,7 +1,7 @@
-let listContainer = document.querySelector(".category_container");
+// let listContainer = document.querySelector(".category_container");
 let listContainer1 = document.querySelector(".pink_grid");
 let listContainer2 = document.querySelector(".thirdBlock");
-let listContainer3 = document.querySelector(".category_container1");
+// let listContainer3 = document.querySelector(".category_container1");
 let listContainer4 = document.querySelector(".lastBlock");
 
 const mycategory = new URLSearchParams(window.location.search).get("tag");
@@ -29,7 +29,7 @@ function showRecipes() {
       let dishesRecipes = shuffledRecipes.slice(3, 6);
 
       // Vis opskrifter i "Popular"
-      showPopular(popularRecipes);
+      // showPopular(popularRecipes);
 
       // Vis én opskrift i "OneRecipe" sektionen
       showOneRecipe(popularRecipes.slice(0, 1));
@@ -38,27 +38,27 @@ function showRecipes() {
       showOneRecipe2(popularRecipes.slice(0, 1));
 
       // Vis de næste 3 opskrifter i "Dishes"
-      showDishes(dishesRecipes);
+      // showDishes(dishesRecipes);
 
       showOneRecipe3(popularRecipes.slice(0, 1));
     });
 }
 // done nedaf
-function showPopular(recipes) {
-  const markup = recipes
-    .map(
-      (recipe) =>
-        `
-         <a class="category_box" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
-         <img src="${recipe.image}" alt="${recipe.name}" />
-         <h4>${recipe.tags[0]}</h4>
-         </a>
-          `
-    )
-    .join("");
+// function showPopular(recipes) {
+//   const markup = recipes
+//     .map(
+//       (recipe) =>
+//         `
+//          <a class="category_box" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
+//          <img src="${recipe.image}" alt="${recipe.name}" />
+//          <h4>${recipe.tags[0]}</h4>
+//          </a>
+//           `
+//     )
+//     .join("");
 
-  listContainer.innerHTML = markup;
-}
+//   listContainer.innerHTML = markup;
+// }
 // done nedaf
 function showOneRecipe() {
   fetch("https://dummyjson.com/recipes/29")
@@ -107,21 +107,21 @@ function showOneRecipe2() {
     });
 }
 // done nedaf
-function showDishes(recipes) {
-  const markup = recipes
-    .map(
-      (recipe) =>
-        `
-         <a class="carousel_container" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
-         <img src="${recipe.image}" alt="${recipe.name}" />
-         <h4>${recipe.tags[0]}</h4>
-         </a>
-          `
-    )
-    .join("");
+// function showDishes(recipes) {
+//   const markup = recipes
+//     .map(
+//       (recipe) =>
+//         `
+//          <a class="carousel_container" href="https://dummyjson.com/recipes/tag/${recipe.tags[0]}">
+//          <img src="${recipe.image}" alt="${recipe.name}" />
+//          <h4>${recipe.tags[0]}</h4>
+//          </a>
+//           `
+//     )
+//     .join("");
 
-  listContainer3.innerHTML = markup;
-}
+//   listContainer3.innerHTML = markup;
+// }
 
 function showOneRecipe3() {
   fetch("https://dummyjson.com/recipes/23")
