@@ -1,7 +1,7 @@
-// const recipeId = new URLSearchParams(window.location.search).get("id");
+const recipeId = new URLSearchParams(window.location.search).get("id");
 let recipeContainer = document.querySelector(".layout");
 
-const recipeId = 2;
+// const recipeId = 2;
 
 fetch(`https://dummyjson.com/recipes?limit=0`)
   .then((response) => response.json())
