@@ -120,15 +120,17 @@ a {
   color: inherit;
 }
 
+.header_right{
+  display: flex;
+}
+
 .burger {
   display: flex;
   flex-direction: column;
   gap: 5.5px;
   cursor: pointer;
-  width: 24px;
-  position: absolute;
-  right: 20px;
   z-index: 100;
+  padding: 0px 25px 0px 12px;
 }
 
 .burger span {
@@ -138,6 +140,11 @@ a {
   background: var(--blue);
   transition: 0.3s;
   border-radius: 2px;
+}
+
+.search {
+  width: clamp(20px, 2vw, 25px);
+  padding: 0;
 }
 
 /* Når burgeren får klassen .open, forvandles den til et kryds */
@@ -151,9 +158,6 @@ a {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-.search {
-  max-width: 25px;
-}
 
 /* Standardtilstand for menuerne: skjult med display: none */
 .menu,
@@ -338,11 +342,11 @@ footer p {
   padding: 15px;
 }
 
-.button {
+/* .button {
   background-color: var(--blue);
   color: var(--pink);
   padding: 10px;
-}
+} */
 
 hr {
   border: none;
@@ -352,7 +356,7 @@ hr {
 }
 
 .footer_logo {
-  width: 130px;
+  width: clamp(137px, 21vw, 280px);
   grid-row: 1;
   margin: auto;
   padding-top: 30px;
@@ -368,6 +372,13 @@ hr {
   max-width: 445px;
   margin-bottom: 20px;
 }
+
+.curious button{
+position: relative;
+z-index: 100;
+padding: 10px 40px;
+}
+
 
 .footer_eggplant {
   position: absolute;
@@ -410,9 +421,6 @@ hr {
     right: -8%;
   }
 
-  .footer_logo {
-    width: 160px;
-  }
 
   .curious {
     margin-bottom: 40px;
