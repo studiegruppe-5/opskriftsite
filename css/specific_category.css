@@ -54,6 +54,12 @@ img {
   max-width: 100%;
 }
 
+select {
+  background-color: var(--blue);
+  border: none;
+  color: var(--pink);
+}
+
 @media (width >=500px) {
   .favorites {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));

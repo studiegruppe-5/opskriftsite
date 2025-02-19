@@ -1,63 +1,64 @@
 let listContainer = document.querySelector(".recipes-container");
 const selectElement = document.querySelector("#selectElement");
 
-function showRecipes(event) {
-  fetch(`https://dummyjson.com/recipes`)
-    .then((response) => response.json())
-    .then((data) => {
-      showAllRecipes(data.recipes);
-    });
+// Definer egne kategorier med tilhørende tags
+const categories = {
+  Dessert: ["Smoothie", "Tiramisu", "Cookies", "Mango", "Cocktail", "Matcha ice cream"],
+  Vegetarian: ["Pizza", "Vegetarian", "Cookies", "Bruschetta", "Caprese", "Saag", "Tagine", "Mango", "Tiramisu", "Smoothie", "Elote", "Borscht", "Dosa", "Falafel", "Caipirinha"],
+};
 
-  function showAllRecipes(data) {
-    const markup = data
-      .filter((recipe) => {
-        if (event) {
-          if (event.target.value == "cuisine") {
-            return recipe.cuisine;
-          } else if (event.target.value == "dessert") {
-            recipe.dessert;
-          }
-        }
-      })
-      .map(
-        (recipe) =>
-          `
-      <div class="recipe">
-      <a href="recipe.html?id=${recipe.id}"><img src="https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp" alt="${recipe.name}" />
-      <h3>${recipe.name}</h3>
+// Hent alle opskrifter én gang og gem dem
+let allRecipes = [];
+
+// Hent data og vis alle opskrifter ved første load
+fetch(`https://dummyjson.com/recipes`)
+  .then((response) => response.json())
+  .then((data) => {
+    allRecipes = data.recipes; // Gem alle opskrifter
+    showAllRecipes(allRecipes); // Vis dem
+  });
+
+function showAllRecipes(data) {
+  const markup = data
+    .map(
+      (recipe) =>
+        `
+    <div class="recipe">
+      <a href="recipe.html?id=${recipe.id}">
+        <img src="${recipe.image}" alt="${recipe.name}" />
+        <h3>${recipe.name}</h3>
       </a>
-      </div>
-      `
-      )
-      .join("");
+    </div>
+    `
+    )
+    .join("");
 
-    listContainer.innerHTML = markup;
-  }
+  listContainer.innerHTML = markup;
 }
 
-selectElement.addEventListener("change", showRecipes);
+// Funktion til at filtrere opskrifter baseret på valgte kategori eller tag
+function filterRecipes(event) {
+  const selectedValue = event.target.value;
 
-showRecipes();
+  if (selectedValue === "all") {
+    showAllRecipes(allRecipes);
+    return;
+  }
 
-// function showProduct(event) {
-//   console.log(event);
-//   fetch("https://dummyjson.com/recipes/tags")
-//     .then((response) => response.json())
-//     .then(showList);
+  let validTags = [];
 
-//   function showList(product) {
-//     const markup = data.filter((product) => {
-//       if (event) {
-//         if (event.target.value == "discount") {
-//           return product.discount;
-//         } else if (event.target.value == "souldout") {
-//           return product.souldout;
-//         } else {
-//           return true;
-//         }
-//       } else {
-//         return true;
-//       }
-//     });
-//   }
-// }
+  // Hvis det valgte filter er en kategori, brug dens tags
+  if (categories[selectedValue]) {
+    validTags = categories[selectedValue].map((tag) => tag.toLowerCase());
+  } else {
+    validTags = [selectedValue.toLowerCase()]; // Ellers brug det direkte som et tag
+  }
+
+  const filteredRecipes = allRecipes.filter((recipe) => recipe.tags.some((tag) => validTags.includes(tag.toLowerCase())));
+
+  console.log("Filtrerede opskrifter:", filteredRecipes);
+  showAllRecipes(filteredRecipes);
+}
+
+// Lyt efter ændringer i select-boksen
+selectElement.addEventListener("change", filterRecipes);
