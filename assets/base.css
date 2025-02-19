@@ -18,9 +18,10 @@
 
 html {
   --blue: #00408d;
-  --pink: #f3d7d3;
+  --babypink: #f3d7d3;
   --banner: #f8b7b0;
   --beige: #f2eee9;
+  --pink: #F8B7B0;
 }
 
 body {
@@ -71,8 +72,24 @@ h4 {
 
 p {
   font-family: playfair_display_regular, serif;
-  font-size: clamp(0.8rem, 2vw, 2rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
   color: var(--blue);
+}
+
+button {
+  background-color: #00408d;
+  color: #f3d7d3;
+  border: none;
+  font-family: playfair_display_regular, serif;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  padding: 3px 20px;
+  display: inline-block;
+  cursor: pointer; /* Sikrer at det ligner en knap */
+  transition: transform 0.3s ease-in-out; /* Tilføjer en glidende effekt */
+}
+
+button:hover {
+  transform: scale(1.1); /* Gør knappen 10% større ved hover */
 }
 
 .pink_text {
@@ -90,8 +107,8 @@ header {
 }
 
 header img {
-  width: 100px;
-  padding: 10px;
+  width: clamp(70px, 12vw, 125px);
+  padding: 4px 5px 0px;
 }
 
 a {
@@ -278,7 +295,7 @@ a {
 /******** FOOTER **********/
 
 footer {
-  background-color: var(--pink);
+  background-color: var(--babypink);
   text-align: center;
   margin: 0;
   padding: 20px;
@@ -376,6 +393,10 @@ padding-bottom: 50px;
 
 .footer_logo{
   width: 160px;
+}
+
+.curious{
+  margin-bottom: 40px;
 }
 }
 
