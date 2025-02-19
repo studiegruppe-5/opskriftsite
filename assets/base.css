@@ -81,7 +81,7 @@ p {
   color: var(--blue);
 }
 
-button {
+.btn{
   background-color: #00408d;
   color: #f3d7d3;
   border: none;
@@ -141,7 +141,7 @@ a {
   gap: 5.5px;
   cursor: pointer;
   z-index: 100;
-  padding: 0px 25px 0px 12px;
+  padding: 2px 25px 0px 12px;
 }
 
 .burger span {
@@ -316,6 +316,13 @@ max-width: 500px;
   margin: 4%;
   background-color: var(--pink);
   color: var(--blue);
+  border: none;
+  font-family: playfair_display_regular, serif;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  padding: 3px 20px;
+  display: inline-block;
+  cursor: pointer; 
+  transition: transform 0.3s ease-in-out; 
 }
 
 .email input {
@@ -355,12 +362,6 @@ footer p {
   padding: 15px;
 }
 
-/* .button {
-  background-color: var(--blue);
-  color: var(--pink);
-  padding: 10px;
-} */
-
 hr {
   border: none;
   height: 2px;
@@ -386,7 +387,7 @@ hr {
   margin-bottom: 20px;
 }
 
-.curious button{
+.curious .btn{
 position: relative;
 z-index: 100;
 padding: 10px 40px;
