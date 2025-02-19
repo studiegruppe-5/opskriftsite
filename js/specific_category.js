@@ -4,7 +4,7 @@ const selectElement = document.querySelector("#selectElement");
 // Definer egne kategorier med tilhørende tags
 const categories = {
   Dessert: ["Smoothie", "Tiramisu", "Cookies", "Mango", "Cocktail", "Matcha ice cream"],
-  Vegetarian: ["Pizza", "Vegetarian", "Cookies", "Bruschetta", "Caprese", "Saag", "Tagine", "Mango", "Tiramisu", "Smoothie", "Elote", "Borscht", "Dosa", "Falafel", "Caipirinha"],
+  Vegetarian: ["Pizza", "Vegetarian", "Bruschetta", "Caprese", "Saag", "Tagine", "Elote", "Borscht", "Dosa", "Falafel"],
 };
 
 // Hent alle opskrifter én gang og gem dem

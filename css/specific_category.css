@@ -21,7 +21,8 @@ h2 {
 section {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* X, Y, Blur, Spread, Farve */
   background-color: var(--beige);
-  padding-top: 5px;
+  padding: 12px;
+  margin: auto;
   margin-bottom: 50px;
 }
 
@@ -61,17 +62,23 @@ select {
   text-align: center;
   font-family: playfair_display_semibold;
   text-transform: uppercase;
-  padding: 3px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: var(--blue);
+  color: var(--pink);
+  font-size: 1.3rem;
 }
 
 @media (width >=500px) {
-  .favorites {
+  .recipes-container {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
 
 @media (width >= 1000px) {
-  .favorites {
+  .recipes-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
