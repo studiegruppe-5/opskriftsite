@@ -1,75 +1,64 @@
-// //  ${recipes.ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}  mapper array inde i array
+let listContainer = document.querySelector(".recipes-container");
+const selectElement = document.querySelector("#selectElement");
 
-let listContainer = document.querySelector(".favorites");
-let listContainer1 = document.querySelector(".oneRecipe");
-let listContainer2 = document.querySelector(".fullArray");
+// Definer egne kategorier med tilhørende tags
+const categories = {
+  Dessert: ["Smoothie", "Tiramisu", "Cookies", "Mango", "Cocktail", "Matcha ice cream"],
+  Vegetarian: ["Pizza", "Vegetarian", "Bruschetta", "Caprese", "Saag", "Tagine", "Elote", "Borscht", "Dosa", "Falafel"],
+};
 
-const mycategory = new URLSearchParams(window.location.search).get("tag");
+// Hent alle opskrifter én gang og gem dem
+let allRecipes = [];
 
-console.log(mycategory);
-
-fetch(`https://dummyjson.com/recipes/tag/${mycategory}`)
+// Hent data og vis alle opskrifter ved første load
+fetch(`https://dummyjson.com/recipes`)
   .then((response) => response.json())
   .then((data) => {
-    showFavorites(data.recipes);
-    showOneRecipe(data.recipes);
-    showFullArray(data.recipes);
+    allRecipes = data.recipes; // Gem alle opskrifter
+    showAllRecipes(allRecipes); // Vis dem
   });
 
-function showFavorites(data) {
+function showAllRecipes(data) {
   const markup = data
-    .map(
-      (recipes) =>
-        `
-          <div>          
-          <img src="${recipes.image}" alt="" />
-          <h3>${recipes.name}</h3>
-          </div>
-          `
-    )
-    .join("");
-  listContainer.innerHTML = markup;
-}
-
-function showOneRecipe(data) {
-  const markup = data
-    .map(
-      (recipes) =>
-        `
-    <section class="second">
-    
-<img src="${recipes.image}" alt="" />
-<h3>${recipes.name}</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti doloremque ex dolorum incidunt neque voluptatibus ipsam laboriosam earum.</p>
-    </section>
-
-      `
-    )
-    .join("");
-  listContainer1.innerHTML = markup;
-}
-
-function showFullArray(data) {
-  let markup = `<h2>${mycategory}</h2>`;
-
-  // Wrapper til opskrifter
-  markup += `<div class="favorites">`;
-
-  // Generer HTML for hver opskrift
-  markup += data
     .map(
       (recipe) =>
         `
-        <div >
-          <img src="${recipe.image}" alt="" />
-          <h3>${recipe.name}</h3>
-        </div>
-        `
+    <div class="recipe">
+      <a href="recipe.html?id=${recipe.id}">
+        <img src="${recipe.image}" alt="${recipe.name}" />
+        <h3>${recipe.name}</h3>
+      </a>
+    </div>
+    `
     )
     .join("");
 
-  // Lukker wrapper-div'en
-  markup += `</div>`;
-
-  listContainer2.innerHTML = markup;
+  listContainer.innerHTML = markup;
 }
+
+// Funktion til at filtrere opskrifter baseret på valgte kategori eller tag
+function filterRecipes(event) {
+  const selectedValue = event.target.value;
+
+  if (selectedValue === "all") {
+    showAllRecipes(allRecipes);
+    return;
+  }
+
+  let validTags = [];
+
+  // Hvis det valgte filter er en kategori, brug dens tags
+  if (categories[selectedValue]) {
+    validTags = categories[selectedValue].map((tag) => tag.toLowerCase());
+  } else {
+    validTags = [selectedValue.toLowerCase()]; // Ellers brug det direkte som et tag
+  }
+
+  const filteredRecipes = allRecipes.filter((recipe) => recipe.tags.some((tag) => validTags.includes(tag.toLowerCase())));
+
+  console.log("Filtrerede opskrifter:", filteredRecipes);
+  showAllRecipes(filteredRecipes);
+}
+
+// Lyt efter ændringer i select-boksen
+selectElement.addEventListener("change", filterRecipes);
