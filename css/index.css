@@ -80,11 +80,19 @@ img {
   padding: 3% 3%;
 }
 
+.category_container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  padding: 3% 3%;
+}
 
-.popular_box {
+
+/* .popular_box {
   width: 100%;
   padding: 20px 5px;
-}
+} */
 
 
 /**********KARUSSEL SLUT **************/
