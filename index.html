@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="assets/base.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" type="image/webp" href="./assets/img/favi.webp" />
-    <script src="js/index.js" defer></script>
     <script src="assets/base.js" defer></script>
 
     <link rel="icon" type="image/webp" href="assets/img/favi.webp" />
@@ -81,8 +80,19 @@
 
       <section class="popular">
         <h2>Popular categories</h2>
-        <div class="category_container1">
-          <div class="category_box"></div>
+        <div class="category_container">
+          <a href="specific_category.html?filter=italian">
+            <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="${recipe.name}" />
+            <h4>Italian</h4>
+          </a>
+          <a href="specific_category.html?filter=vegetarian">
+            <img src="https://cdn.dummyjson.com/recipe-images/9.webp" alt="${recipe.name}" />
+            <h4>Vegetarian</h4>
+          </a>
+          <a href="specific_category.html?filter=dessert">
+            <img src="https://cdn.dummyjson.com/recipe-images/3.webp" alt="${recipe.name}" />
+            <h4>Dessert</h4>
+          </a>
         </div>
       </section>
 
@@ -90,7 +100,16 @@
         <div class="favorite_potato">
           <img src="assets/img/potato.webp" alt="Kartoffel" />
         </div>
-        <div class="pink_grid"></div>
+        <div class="pink_grid">
+          <img src="https://cdn.dummyjson.com/recipe-images/29.webp" alt="${recipe.name}" />
+          <div class="text_flex">
+            <h2>Are you busy?</h2>
+            <p>Need meal inspiration? Sometimes, the simplest ingredients can create the most delicious dishes. You should try our mouthwatering Lebanese Falafel Wrap!</p>
+            <a href="recipe.html?id=29">
+              <button>Explore</button>
+            </a>
+          </div>
+        </div>
         <div class="favorite_eggplant">
           <img src="assets/img/eggplant.webp" alt="Aubergine" />
         </div>
@@ -104,54 +123,64 @@
       </section>
 
       <section class="thirdBlock">
-        <!-- <div class="grid_1_1">
+        <div class="grid_1_1">
           <div class="mushroom_container">
             <img src="assets/img/mushroom.webp" alt="Mushroom" />
           </div>
           <div class="img_container">
-            <img src="assets/img/fyld.jpg" alt="Pizza" />
+            <img src="https://cdn.dummyjson.com/recipe-images/21.webp" alt="${recipe.name}" />
           </div>
           <div class="text_flex">
-            <h3>Healthy options</h3>
-            
+            <h3>Asian options</h3>
+
             <div class="text_box">
-              <p>
-                Det behøver ikke at være kedeligt at spise sundt. Find
-                inspiration til sunde og smagsfulde retter.
-              </p>
+              <p>Craving something delicious? With the perfect blend of bold flavors and fresh ingredients, you can create a meal that excites your taste buds. Try our Asian recipes!</p>
+
+              <a href="specific_category.html?filter=asian">
+                <button>Explore</button>
+              </a>
             </div>
-            
-            <button>Udforsk</button>
           </div>
-        </div> -->
+        </div>
       </section>
 
       <section class="popular">
-        <h2>Popular categories</h2>
-        <div class="category_container"></div>
+        <h2>Popular recipes</h2>
+        <div class="category_container">
+          <a href="recipe.html?id=18">
+            <img src="https://cdn.dummyjson.com/recipe-images/18.webp" alt="${recipe.name}" />
+            <h4>Korean Bibimbap</h4>
+          </a>
+          <a href="recipe.html?id=5">
+            <img src="https://cdn.dummyjson.com/recipe-images/5.webp" alt="${recipe.name}" />
+            <h4>Mango Salsa Chicken</h4>
+          </a>
+          <a href="recipe.html?id=10">
+            <img src="https://cdn.dummyjson.com/recipe-images/10.webp" alt="${recipe.name}" />
+            <h4>Shrimp Scampi Pasta</h4>
+          </a>
+        </div>
       </section>
 
       <section class="lastBlock">
-        <!-- <div class="grid_1_1">
+        <div class="grid_1_1">
           <div class="img_container">
-            <img src="assets/img/fyld.jpg" alt="Pizza" />
+            <img src="https://cdn.dummyjson.com/recipe-images/23.webp" alt="${recipe.name}" />
           </div>
           <div class="text_flex">
             <h3>Sweets</h3>
 
             <div class="text_box">
-              <p>
-                Kan du rigtig meget godt lide kage og alt muligt andet og huller
-                i tænderne så spis alt vores lækre sukkermummelum.
-              </p>
+              <p>Got a sweet tooth? Even the simplest ingredients can transform into the most delightful desserts. Indulge in our goto dessert!</p>
             </div>
+            <a href="specific_category.html?filter=dessert"></a>
 
-            <button>Udforsk</button>
+            <button>Explore</button>
           </div>
           <div class="mitt_container">
             <img src="assets/img/mitt.webp" alt="Baking mitt" />
           </div>
-        </div> -->
+        </div>
       </section>
       <section class="email full_width">
         <img src="assets/img/logo_pink.webp" alt="" />
