@@ -52,6 +52,7 @@ h1 {
   font-size: clamp(3rem, 8vw, 7rem);
   color: var(--blue);
   text-align: center;
+  margin-top: 0;
 }
 
 h2 {
@@ -96,9 +97,14 @@ button:hover {
   transform: scale(1.1); /* Gør knappen 10% større ved hover */
 }
 
-.pink_text {
-  color: var(--pink);
+.main_back{
+  display: inline-block;
+  color: var(--blue);
+  cursor: pointer;
+  padding: 0px 28px 0;
+  font-size: 50px;
 }
+
 
 /**************** HEADER ********************/
 /* Grundlæggende styling for header og burger-ikon */
@@ -300,6 +306,12 @@ a {
   max-width: 32%;
 }
 
+.pink_text {
+  color: var(--pink);
+text-align: center;
+max-width: 500px;
+}
+
 .email button {
   margin: 4%;
   background-color: var(--pink);
@@ -315,10 +327,6 @@ a {
   border: 0;
 }
 
-.max_width {
-  max-width: 300px;
-  text-align: center;
-}
 /******** FOOTER **********/
 
 footer {

@@ -1,3 +1,4 @@
+// TIL BURGERMENU
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.querySelector(".burger");
   const mainMenu = document.querySelector(".menu");
@@ -36,3 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Burgerikonet forbliver som kryds
   });
 });
+
+// TILBAGEKNAP
+function goBack() {
+  window.history.back();
+}
