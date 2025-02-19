@@ -58,6 +58,10 @@ select {
   background-color: var(--blue);
   border: none;
   color: var(--pink);
+  text-align: center;
+  font-family: playfair_display_semibold;
+  text-transform: uppercase;
+  padding: 3px;
 }
 
 @media (width >=500px) {
