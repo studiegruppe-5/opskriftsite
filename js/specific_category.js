@@ -68,8 +68,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectElement = document.querySelector("#selectElement");
 
   const categories = {
-    Dessert: ["Smoothie", "Tiramisu", "Cookies", "Mango", "Cocktail", "Matcha ice cream"],
-    Vegetarian: ["Pizza", "Vegetarian", "Bruschetta", "Caprese", "Saag", "Tagine", "Elote", "Borscht", "Dosa", "Falafel"],
+    Dessert: [
+      "Smoothie",
+      "Tiramisu",
+      "Cookies",
+      "Mango",
+      "Cocktail",
+      "Matcha ice cream",
+    ],
+    Vegetarian: [
+      "Pizza",
+      "Vegetarian",
+      "Bruschetta",
+      "Caprese",
+      "Saag",
+      "Tagine",
+      "Elote",
+      "Borscht",
+      "Dosa",
+      "Falafel",
+    ],
   };
 
   let allRecipes = [];
@@ -90,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="recipe">
         <a href="recipe.html?id=${recipe.id}">
           <img src="${recipe.image}" alt="${recipe.name}" />
-          <h3>${recipe.name}</h3>
+          <h4>${recipe.name}</h4>
         </a>
       </div>
       `
@@ -146,10 +164,14 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("URL Filter:", filterParam);
 
       // Normaliser værdien (store/små bogstaver)
-      filterParam = filterParam.charAt(0).toUpperCase() + filterParam.slice(1).toLowerCase();
+      filterParam =
+        filterParam.charAt(0).toUpperCase() +
+        filterParam.slice(1).toLowerCase();
 
       // Tjek om værdien findes i select-options
-      const validOption = [...selectElement.options].some((opt) => opt.value === filterParam);
+      const validOption = [...selectElement.options].some(
+        (opt) => opt.value === filterParam
+      );
 
       if (validOption) {
         selectElement.value = filterParam; // Sæt dropdown til den valgte kategori
