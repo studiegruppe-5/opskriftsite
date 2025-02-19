@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/base.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <!-- <script src="js/index.js" defer></script> -->
+    <link rel="icon" type="image/webp" href="./assets/img/favi.webp" />
     <script src="assets/base.js" defer></script>
+
     <link rel="icon" type="image/webp" href="assets/img/favi.webp" />
     <title>Bites</title>
   </head>
@@ -17,10 +18,15 @@
       </a>
 
       <!-- Burger-menu (udløser visning af hovedmenuen) -->
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div>
+        <!-- <div>
+          <img class="search" src="assets/img/search.webp" alt="Search function" />
+        </div> -->
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
 
       <!-- Hovedmenu -->
@@ -29,16 +35,18 @@
         <img src="assets/img/onion.webp" alt="løg" class="illustration2" />
         <img src="assets/img/mushroom.webp" alt="Champignon" class="illustration3" />
         <div>
-          <h4>Udforsk ud fra</h4>
+          <h4>Explore by</h4>
           <nav>
             <ul>
-              <li>Alle kategorier</li>
+              <li><a href="specific_category.html?filter=all">Alle kategorier</a></li>
               <!-- Link til at åbne submenu -->
               <li class="open-submenu">Cuisines</li>
               <li>Tilberedningstid</li>
               <li>Allergener</li>
             </ul>
           </nav>
+          <h4>Be a part of Bites</h4>
+          <a class="create_your_own" href="create.html">Add your own recipe</a>
         </div>
       </section>
 
@@ -52,9 +60,9 @@
           <h4>Cuisine</h4>
           <nav>
             <ul>
-              <li><a href="specific_category.html">Italiensk</a></li>
-              <li><a href="#">Asiatisk</a></li>
-              <li><a href="#">Mellemøstlig</a></li>
+              <li><a href="specific_category.html?filter=italian">Italian</a></li>
+              <li><a href="specific_category.html?filter=asian">Asian</a></li>
+              <li><a href="specific_category.html?filter=indian">Indian</a></li>
             </ul>
           </nav>
         </div>

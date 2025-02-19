@@ -21,7 +21,7 @@ html {
   --babypink: #f3d7d3;
   --banner: #f8b7b0;
   --beige: #f2eee9;
-  --pink: #F8B7B0;
+  --pink: #f8b7b0;
 }
 
 body {
@@ -147,6 +147,10 @@ a {
   transform: translateY(-9px) rotate(-45deg);
 }
 
+.search {
+  max-width: 25px;
+}
+
 /* Standardtilstand for menuerne: skjult med display: none */
 .menu,
 .submenu {
@@ -183,7 +187,8 @@ a {
 }
 
 .menu li,
-.submenu li {
+.submenu li,
+.create_your_own {
   font-family: inherit;
   margin: 15px 0;
   font-size: 18px;
@@ -192,8 +197,13 @@ a {
 }
 
 .menu li:hover,
-.submenu li:hover {
+.submenu li:hover,
+.create_your_own:hover {
   text-decoration: underline;
+}
+
+.create_your_own {
+  padding-top: 2px;
 }
 
 /* Placering af illustrationer */
@@ -341,22 +351,23 @@ hr {
 }
 .icons {
   display: flex;
-  justify-content: space-evenly;}
+  justify-content: space-evenly;
+}
 
-  .curious{
-    position: relative;
-    padding: 50px;
-    max-width: 445px;
-    margin-bottom: 20px;
-  }
+.curious {
+  position: relative;
+  padding: 50px;
+  max-width: 445px;
+  margin-bottom: 20px;
+}
 
-  .footer_eggplant{
-    position: absolute;
-    width: clamp(137px, 24vw, 300px);
-    top: 56px;
-    right: -3%;
-    transform: rotate(10deg);
-  }
+.footer_eggplant {
+  position: absolute;
+  width: clamp(137px, 24vw, 300px);
+  top: 56px;
+  right: -3%;
+  transform: rotate(10deg);
+}
 
 /**********************/
 
@@ -380,28 +391,28 @@ hr {
     right: 0;
   }
 
-footer{
-flex-direction: row;
-justify-content: center;
-gap: 6%;
-padding-bottom: 50px;
-}
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6%;
+    padding-bottom: 50px;
+  }
 
-.footer_eggplant{
-  right: -8%;
-}
+  .footer_eggplant {
+    right: -8%;
+  }
 
-.footer_logo{
-  width: 160px;
-}
+  .footer_logo {
+    width: 160px;
+  }
 
-.curious{
-  margin-bottom: 40px;
-}
+  .curious {
+    margin-bottom: 40px;
+  }
 }
 
 @media (width >= 1024px) {
-  .footer_eggplant{
+  .footer_eggplant {
     transform: rotate(0deg);
   }
 }
