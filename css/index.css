@@ -16,7 +16,7 @@ video {
   top: 50%; /* Centrer vertikalt i sektionen */
   left: 50%; /* Centrer horisontalt i sektionen */
   transform: translate(-50%, -50%); /* Juster centerpunkt til midten */
-  z-index: 10;
+  z-index: 2;
 }
 
 /* HERO SLUT */
