@@ -81,13 +81,11 @@ Dette afsnit skal forklare, hvad I konkret har arbejdet med, for at udvikle webs
 - Dynamisk visning af produkter i HTML.
 - Formular til at tilføje et element til hjemmesiden
 
-Brug korte beskrivelser, som i eksemplerne herover
-
 # API endpoints
 
 Dette afsnit skal liste de endpoints fra API'et i har benyttet:
 
-- (fx. https://dummyjson.com/products)
+- (`https://dummyjson.com/recipes?limit=50`)
 
 # Dokumentation af Funktion
 
@@ -98,11 +96,24 @@ Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvi
 - Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.
 - Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:
 
+  Nedenfor tager funktionen showAllRecipes fat i data fra JSON filen. Variablen markup oprettes hvori der med .map bliver gemt hver enkel opskrift i data. Med ${recipe.xxxx} tages der fat i variablen recipe, som indeholder data for hvert enkel opskrift i JSON filen. .join("") bruges til at samle indholdet uden ekstra mellemrum/tegn og sætter det sammen til en streng. Til sidst bliver markup variablens indhold puttet ind i listContainer variablen
+
 ```javascript
-//funktionens kode:
-function voresFunktion(sprog) {
-  console.log(`${sprog} syntax highlighting`);
+function showAllRecipes(data) {
+  const markup = data
+    .map(
+      (recipe) =>
+        `
+      <div class="recipe">
+        <a href="recipe.html?id=${recipe.id}">
+          <img src="${recipe.image}" alt="${recipe.name}" />
+          <h4>${recipe.name}</h4>
+        </a>
+      </div>
+      `
+    )
+    .join("");
+
+  listContainer.innerHTML = markup;
 }
-//hvordan funktionen kaldes:
-voresFunktion("JavaScript");
 ```
