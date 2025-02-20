@@ -77,9 +77,19 @@ Beslutte hvordan i vil navngive filer og mapper for at sikre en ensartet struktu
 Dette afsnit skal forklare, hvad I konkret har arbejdet med, for at udvikle websitet. Tænk over hvilke interaktioner brugeren kan foretage på sitet? Eller hvordan websitet håndterer og præsenterer data? Eksempler på funktionalitet, der kan beskrives:
 
 - Hentning af produkter fra API.
-- Filtrering af produkter baseret på brugerens valg.
+  Vi bruger fetch til at hente data fra API'et og .then for at konvertere Response til JSON. Derefter bruger vi .then igen for at gå igennem alt dataen i JSON filen. Hver enkelt opskrift gemmes i en variabel som bliver brugt til at tilgå de forskellige nøgler og værdier i opskriften.
+
+- Filtrering af produkter baseret på brugerens valg
+  For at få styr på filtering har vi brugt en funktion der tager value som argument. Value er værdien af det <option> tag der ligger i vores drop down menu. Inde i menuen er der en masse if-sætninger der gør, at det kun er bestemte ting der vises når value har en bestemt værdi. Eksempler på if-sætninger: - En der siger, at hvis value er “all” skal den køre vores funktion, der viser alle opskrifter. - En af de andre siger at den skal kigge i en en variabel vi har oprettet med kategorier og se om den value den har, findes som en kategori. Dette gemmes i en variabel, som bliver brugt længere ned i en anden funktion. Den funktion filtrerer alle opskrifter og sørger for, at det kun er opskrifter, der indeholder et gyldigt tag der bliver vist på siden.
+
+Udover det har vi også tilføjet en eventlistener på vores <select> tag (.selectElement), som lytter på når der bliver klikket og dermed skiftet kategori. Ud fra dette skal den kører den funktion der filtrerer, med den valgte kategori som argument.
+
 - Dynamisk visning af produkter i HTML.
+  Ved at tage fat i API'et og konvertere til JSON kan vi med ${} tage fat i den variabel vi har gemt alle opskrifter i og bruge "." til at fange de forskellige nøgler der er i hvert objekt så f.eks. ${recipe.name}. På den måde får man det navn der passer til en specifik
+  opskrift
+
 - Formular til at tilføje et element til hjemmesiden
+  Formularen har vi lavet med <form> tag og inde i den har vi lavet forskellige labels der har noget at gøre med opskrift. F.eks. recipe name, cooking time, servings, ingredients og instructions.
 
 # API endpoints
 
