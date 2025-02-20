@@ -81,13 +81,11 @@ Dette afsnit skal forklare, hvad I konkret har arbejdet med, for at udvikle webs
 - Dynamisk visning af produkter i HTML.
 - Formular til at tilføje et element til hjemmesiden
 
-Brug korte beskrivelser, som i eksemplerne herover
-
 # API endpoints
 
 Dette afsnit skal liste de endpoints fra API'et i har benyttet:
 
-- (fx. https://dummyjson.com/products)
+- (`https://dummyjson.com/recipes`)
 
 # Dokumentation af Funktion
 

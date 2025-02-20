@@ -5,10 +5,11 @@ let recipeContainer = document.querySelector(".layout");
 // Opretter en variabel (recipeContainer), der tager fat i den div som indholdet senere skal lægges ind i
 
 fetch(`https://dummyjson.com/recipes`)
-  // Bruger fetch til at hente data fra API'et og .then for at konvertere response til JSON
+  // Bruger fetch til at hente data fra API'et
   .then((response) => response.json())
-  // Bruger .then for at gå igennem alt dataen i JSON filen
+  // .then for at konvertere response til JSON
   .then((data) => {
+    // Bruger .then for at gå igennem alt dataen i JSON filen
     const recipe = data.recipes.find((r) => r.id == recipeId);
     // Opretter en variabel (recipe), hvori den opskrift der matcher det id der bliver givet med i URL'en bliver lagt ind
 
