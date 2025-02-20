@@ -12,7 +12,7 @@ const categories = {
 let allRecipes = [];
 // Opretter en variabel (allRecipes) og gemmer et tomt array, der senere skal bruges
 
-fetch(`https://dummyjson.com/recipes`)
+fetch(`https://dummyjson.com/recipes?limit=50`)
   // Bruger fetch til at hente data fra API'et og .then for at konvertere response til JSON
 
   .then((response) => response.json())

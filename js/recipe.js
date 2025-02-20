@@ -4,7 +4,7 @@ const recipeId = new URLSearchParams(window.location.search).get("id");
 let recipeContainer = document.querySelector(".layout");
 // Opretter en variabel (recipeContainer), der tager fat i den div som indholdet senere skal lægges ind i
 
-fetch(`https://dummyjson.com/recipes`)
+fetch(`https://dummyjson.com/recipes?limit=50`)
   // Bruger fetch til at hente data fra API'et
   .then((response) => response.json())
   // .then for at konvertere response til JSON
