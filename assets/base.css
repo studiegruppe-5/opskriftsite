@@ -93,7 +93,7 @@ p {
   transition: transform 0.3s ease-in-out; /* Tilføjer en glidende effekt */
 }
 
-button:hover {
+.btn:hover {
   transform: scale(1.1); /* Gør knappen 10% større ved hover */
 }
 
@@ -103,6 +103,10 @@ button:hover {
   cursor: pointer;
   padding: 0px 28px 0;
   font-size: 50px;
+}
+
+.main_back:hover {
+  transform: scale(1.1); /* Gør knappen 10% større ved hover */
 }
 
 
@@ -253,6 +257,10 @@ a {
   cursor: pointer;
 }
 
+.back-button:hover {
+  transform: scale(1.1); /* Gør knappen 10% større ved hover */
+}
+
 /***************** HEADER SLUT *************/
 
 /************ MOVING TEXT ****************'*/
@@ -325,6 +333,10 @@ max-width: 500px;
   transition: transform 0.3s ease-in-out; 
 }
 
+.email button:hover {
+  transform: scale(1.1); /* Gør knappen 10% større ved hover */
+}
+
 .email input {
   margin: 0 auto;
   display: block;
@@ -375,9 +387,14 @@ hr {
   margin: auto;
   padding-top: 30px;
 }
+
 .icons {
   display: flex;
   justify-content: space-evenly;
+}
+
+.icons a:hover {
+  transform: scale(1.1); /* Gør knappen 10% større ved hover */
 }
 
 .curious {
